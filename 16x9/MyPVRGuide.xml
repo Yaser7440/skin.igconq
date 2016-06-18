@@ -460,7 +460,7 @@
 					<colordiffuse>OverlayColorNF</colordiffuse>
 					<texturesliderbackground border="6,1,8,1">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-					<texturesliderbarfocus border="8,1,6,1" colordiffuse="DialogOverlayColorFO">common/ScrollbarGripFO.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<textureslidernib>-</textureslidernib>
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
@@ -739,7 +739,7 @@
 					<colordiffuse>OverlayColorNF</colordiffuse>
 					<texturesliderbackground border="6,1,8,1">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-					<texturesliderbarfocus border="8,1,6,1" colordiffuse="DialogOverlayColorFO">common/ScrollbarGripFO.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<textureslidernib>-</textureslidernib>
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
@@ -1007,7 +1007,7 @@
 					<colordiffuse>OverlayColorNF</colordiffuse>
 					<texturesliderbackground border="6,1,8,1">common/ScrollBackground.png</texturesliderbackground>
 					<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-					<texturesliderbarfocus border="8,1,6,1" colordiffuse="DialogOverlayColorFO">common/ScrollbarGripFO.png</texturesliderbarfocus>
+					<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 					<textureslidernib>-</textureslidernib>
 					<textureslidernibfocus>-</textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars)</visible>
