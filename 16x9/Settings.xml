@@ -77,12 +77,12 @@
 			<control type="button" id="3">
 				<width>300</width>
 				<height>42</height>
-				<label>14022</label>
+				<label>14211</label>
 				<font>Font42</font>
 				<textcolor>$VAR[TextColor2]</textcolor>
 				<focusedcolor>$VAR[TextColor1]</focusedcolor>
-				<onclick>ActivateWindow(LibrarySettings)</onclick>
-				<onright>ActivateWindow(LibrarySettings)</onright>
+				<onclick>ActivateWindow(MediaSettings)</onclick>
+				<onright>ActivateWindow(MediaSettings)</onright>
 				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
 			</control>
 

@@ -85,18 +85,18 @@
 			<control type="button">
 				<width>300</width>
 				<height>42</height>
-				<label>14022</label>
+				<label>14211</label>
 				<font>Font42</font>
 				<textcolor>$VAR[TextColor1]</textcolor>
-				<visible>Window.IsActive(LibrarySettings)</visible>
+				<visible>Window.IsActive(MediaSettings)</visible>
 			</control>
 			<control type="button">
 				<width>300</width>
 				<height>42</height>
-				<label>14022</label>
+				<label>14211</label>
 				<font>Font42</font>
 				<textcolor>$VAR[TextColor3]</textcolor>
-				<visible>!Window.IsActive(LibrarySettings)</visible>
+				<visible>!Window.IsActive(MediaSettings)</visible>
 			</control>
 
 			<!-- TV -->
