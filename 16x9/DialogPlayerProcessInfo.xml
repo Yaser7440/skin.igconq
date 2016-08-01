@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- fullscreeninfo -->
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<animation type="WindowOpen">
 		<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200"/>
 		<effect type="fade" start="0" end="100" time="200"/>
@@ -82,7 +82,7 @@
 						<width>1280</width>
 						<height>35</height>
 						<aligny>bottom</aligny>
-						<label>$INFO[System.Memory(used.percent),[LIGHT]$LOCALIZE[31089]:[/LIGHT] ,       ]$INFO[System.CpuUsage,[LIGHT]$LOCALIZE[13271][/LIGHT] ]</label>
+						<label>$INFO[System.Memory(used.percent),[LIGHT]$LOCALIZE[31089]:[/LIGHT] ,  ]$INFO[System.CpuUsage,[LIGHT]$LOCALIZE[13271][/LIGHT] ]</label>
 						<font>Font25</font>
 					</control>
 				</control>
@@ -147,6 +147,32 @@
 						<font>Font25</font>
 					</control>
 				</control>
+
+				<!-- Background -->
+				<control type="image">
+					<width>1620</width>
+					<height>40</height>
+					<top>249</top>
+					<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
+				</control>
+
+				<control type="label">
+					<width>1280</width>
+					<height>40</height>
+					<top>249</top>
+					<left>20</left>
+					<label>[LIGHT]Click OK to toggle player debug information[/LIGHT]</label>
+					<font>Font25</font>
+				</control>
+			</control>
+
+			<control type="button" id="100">
+				<left>-10000</left>
+				<top>-10000</top>
+				<width>1</width>
+				<height>1</height>
+				<label>noop</label>
+				<onclick>PlayerDebug</onclick>
 			</control>
 
 			<control type="group">
