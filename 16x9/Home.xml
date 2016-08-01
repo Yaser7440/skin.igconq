@@ -20,8 +20,6 @@
 	<onload condition="!Skin.HasSetting(DownloadAnimatedPosters)">Skin.Reset(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload condition="Skin.HasSetting(DownloadAnimatedPosters)">Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 
-	<include>skinshortcuts-template-widgetReloadTrick</include>
-
 	<controls>
 
 		<!-- Hidden control to load weather conditions -->

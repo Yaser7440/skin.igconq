@@ -227,7 +227,7 @@
 
 					<include content="$SKINSHORTCUTS[widgetInclude]">
 						<param name="target">$SKINSHORTCUTS[target]</param>
-						<param name="path">$SKINSHORTCUTS[path]$PYTHON[$SKINSHORTCUTS[autoreload]]</param>
+						<param name="path">$SKINSHORTCUTS[path]</param>
 						<param name="itemLabel">$SKINSHORTCUTS[itemLabel]</param>
 						<param name="itemAction">$SKINSHORTCUTS[itemAction]</param>
 						<param name="itemIcon">$SKINSHORTCUTS[itemIcon]</param>
@@ -506,7 +506,7 @@
 
 					<include content="$SKINSHORTCUTS[widgetInclude]">
 						<param name="target">$SKINSHORTCUTS[target]</param>
-						<param name="path">$SKINSHORTCUTS[path]$PYTHON[$SKINSHORTCUTS[autoreload]]</param>
+						<param name="path">$SKINSHORTCUTS[path]</param>
 						<param name="itemLabel">$SKINSHORTCUTS[itemLabel]</param>
 						<param name="itemAction">$SKINSHORTCUTS[itemAction]</param>
 						<param name="itemIcon">$SKINSHORTCUTS[itemIcon]</param>
@@ -568,13 +568,6 @@
 			</control>
 		</controls>
 	</other>
-
-	<submenuOther include="hubWidgetReloadTrick" level="1">
-		<propertyGroup>mainmenuWidgets</propertyGroup>
-		<controls>
-			<onunload condition="Container(800$SKINSHORTCUTS[id]).IsUpdating | !IntegerGreaterThan(Container(800$SKINSHORTCUTS[id]).NumItems,0)">SetProperty(refresh800$SKINSHORTCUTS[id],$INFO[system.time(hh:mm:ss)])</onunload>
-		</controls>
-	</submenuOther>
 
 	<submenuOther include="hub-movement" level="1">
 		<propertyGroup>mainmenuWidgets</propertyGroup>
@@ -973,7 +966,7 @@
 
 					<include content="$SKINSHORTCUTS[widgetInclude]">
 						<param name="target">$SKINSHORTCUTS[target]</param>
-						<param name="path">$SKINSHORTCUTS[path]$PYTHON[$SKINSHORTCUTS[autoreload]]</param>
+						<param name="path">$SKINSHORTCUTS[path]</param>
 						<param name="itemLabel">$SKINSHORTCUTS[itemLabel]</param>
 						<param name="itemAction">$SKINSHORTCUTS[itemAction]</param>
 						<param name="itemIcon">$SKINSHORTCUTS[itemIcon]</param>
@@ -1403,7 +1396,7 @@
 						</control>
 				</focusedlayout>
 
-				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]$PYTHON[$SKINSHORTCUTS[autoreload]]</content>
+				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
 			</control>
 
 			<control type="grouplist">
@@ -1767,7 +1760,7 @@
 						</control>
 				</focusedlayout>
 
-				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]$PYTHON[$SKINSHORTCUTS[autoreload]]</content>
+				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[path]</content>
 
 			</control>
 		</controls>
@@ -1826,11 +1819,6 @@
 
 		<property name="widgetInclude" tag="property" attribute="name|widgetPath">widget-content</property>
 		<property name="widgetInclude">widget-static</property>
-
-		<!-- Python snippets -->
-		<property name="autoreload">'' if path in 'script.extendedinfo?' else autoreloadStringAnd %( id ) if path in 'plugin' and path in '?' else autoreloadStringQuestion %( id ) if path in 'plugin' else ''</property>
-		<property name="autoreloadStringAnd">&amp;igConq=$INFO[Window.Property(refresh800%s)]</property>
-		<property name="autoreloadStringQuestion">?igConq=$INFO[Window.Property(refresh800%s)]</property>
 
 		<property name="id" tag="mainmenuid" />
 		<property name="submenuVisibility" tag="property" attribute="name|submenuVisibility" />
@@ -1958,13 +1946,6 @@
 		</controls>
 	</other>
 
-	<other include="widgetReloadTrick">
-		<propertyGroup>mainmenuWidgets</propertyGroup>
-		<controls>
-			<onunload condition="Container(800$SKINSHORTCUTS[id]).IsUpdating | !IntegerGreaterThan(Container(800$SKINSHORTCUTS[id]).NumItems,0)">SetProperty(refresh800$SKINSHORTCUTS[id],$INFO[system.time(hh:mm:ss)])</onunload>
-		</controls>
-	</other>
-
 	<other include="testLabels">
 		<propertyGroup>mainmenuWidgets</propertyGroup>
 		<controls>
@@ -1973,7 +1954,7 @@
 				<top>$PYTHON[100 + (50 * int( id ) )]</top>
 				<width>5000</width>
 				<height>50</height>
-				<label>$PYTHON[$SKINSHORTCUTS[autoreload]] - $SKINSHORTCUTS[path]</label>
+				<label>$SKINSHORTCUTS[path]</label>
 			</control>
 		</controls>
 	</other>

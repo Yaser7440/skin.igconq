@@ -2,7 +2,6 @@
 <window id="1111" type="window">
 
 	<defaultcontrol always="true">8000</defaultcontrol>
-	<include>skinshortcuts-template-hubWidgetReloadTrick</include>
 	<controls>
 
 		<!-- Background -->
