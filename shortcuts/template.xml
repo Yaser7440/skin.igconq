@@ -583,6 +583,29 @@
 	</submenuOther>
 
 
+	<other include="weatherBackground">
+		<condition tag="property" attribute="name|widget">WeatherWidget</condition>
+
+		<propertyGroup>mainmenuWidgets</propertyGroup>
+		<controls>
+			<description>Multi-image background for weather widgets</description>
+			<control type="multiimage">
+				<include>FullscreenDimensions</include>
+				<include>VisibleFadeAnimation</include>
+				<fadetime>400</fadetime>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<imagepath>$INFO[Skin.String(weatherFanart.path)]$INFO[Container(800$SKINSHORTCUTS[id]).ListItem.Property(weatherFanart)]/</imagepath>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+				<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+				<visible>!Skin.HasSetting(widgetFanart)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),$SKINSHORTCUTS[submenuVisibility]) + [Control.HasFocus(800$SKINSHORTCUTS[id]) | String.IsEqual(Skin.String(menuStyle),lumos)] + Skin.HasSetting(weatherFanart.multi)</visible>
+			</control>
+		</controls>
+	</other>
+
+
 
 	<other include="lumos">
 		<!-- Lumos widget - weather -->
