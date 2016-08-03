@@ -32,7 +32,7 @@
 			<control type="group">
 				<left>150</left>
 				<top>621</top>
-				<width>80</width>
+				<width>140</width>
 				<height>60</height>
 				<animation type="WindowOpen" condition="!Window.IsActive(seekbar)">
 					<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200"/>
@@ -42,18 +42,18 @@
 					<effect type="zoom" start="100" end="90" center="auto" easing="in" time="200"/>
 					<effect type="fade" start="100" end="0" time="200"/>
 				</animation>
-				<visible>player.forwarding | player.rewinding | player.paused</visible>
+				<visible>player.forwarding | player.rewinding | player.paused | player.istempo</visible>
 
 				<!-- Background -->
 				<control type="image">
-					<width>80</width>
+					<width>140</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 				</control>
 
 				<!-- Status -->
 				<control type="label">
-					<width>80</width>
+					<width>140</width>
 					<height>60</height>
 					<font>Font36</font>
 					<align>center</align>
@@ -63,7 +63,7 @@
 
 				<!-- Pause -->
 				<control type="image">
-					<left>10</left>
+					<left>40</left>
 					<width>60</width>
 					<height>60</height>
 					<texture>osd/OSDPauseNF.png</texture>

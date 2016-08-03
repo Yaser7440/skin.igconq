@@ -242,16 +242,17 @@
 	</variable>
 
 	<variable name="PlayerStatus">
+		<value condition="Player.IsTempo">[B]x$INFO[Player.PlaySpeed][/B]</value>
 		<value condition="Player.Forwarding2x">[B]x2[/B]</value>
 		<value condition="Player.Forwarding4x">[B]x4[/B]</value>
 		<value condition="Player.Forwarding8x">[B]x8[/B]</value>
 		<value condition="Player.Forwarding16x">[B]x16[/B]</value>
 		<value condition="Player.Forwarding32x">[B]x32[/B]</value>
-		<value condition="Player.Rewinding2x">[B]x2[/B]</value>
-		<value condition="Player.Rewinding4x">[B]x4[/B]</value>
-		<value condition="Player.Rewinding8x">[B]x8[/B]</value>
-		<value condition="Player.Rewinding16x">[B]x16[/B]</value>
-		<value condition="Player.Rewinding32x">[B]x32[/B]</value>
+		<value condition="Player.Rewinding2x">[B]-x2[/B]</value>
+		<value condition="Player.Rewinding4x">[B]-x4[/B]</value>
+		<value condition="Player.Rewinding8x">[B]-x8[/B]</value>
+		<value condition="Player.Rewinding16x">[B]-x16[/B]</value>
+		<value condition="Player.Rewinding32x">[B]-x32[/B]</value>
 	</variable>
 
 	<variable name="SettingButtonFade">

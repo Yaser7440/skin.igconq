@@ -65,20 +65,20 @@
 				<control type="group">
 					<left>150</left>
 					<top>870</top>
-					<width>80</width>
+					<width>140</width>
 					<height>60</height>
-					<visible>player.forwarding | player.rewinding | player.paused</visible>
+					<visible>player.forwarding | player.rewinding | player.paused | player.istempo</visible>
 
 					<!-- Background -->
 					<control type="image">
-						<width>80</width>
+						<width>140</width>
 						<height>60</height>
 						<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 					</control>
 
 					<!-- Status -->
 					<control type="label">
-						<width>80</width>
+						<width>140</width>
 						<height>60</height>
 						<font>Font36</font>
 						<align>center</align>
@@ -88,7 +88,7 @@
 
 					<!-- Pause -->
 					<control type="image">
-						<left>10</left>
+						<left>40</left>
 						<width>60</width>
 						<height>60</height>
 						<texture colordiffuse="$VAR[DialogColor1]">osd/OSDPauseNF.png</texture>

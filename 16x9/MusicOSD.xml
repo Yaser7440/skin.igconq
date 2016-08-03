@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- musicosd -->
-	<defaultcontrol always="true">1</defaultcontrol>
+	<defaultcontrol always="true">4</defaultcontrol>
 
 	<controls>
 
@@ -9,9 +9,9 @@
 		<control type="group">
 			<left>150</left>
 			<top>795</top>
-			<width>80</width>
+			<width>140</width>
 			<height>60</height>
-			<visible>player.forwarding | player.rewinding | player.paused</visible>
+			<visible>player.forwarding | player.rewinding | player.paused | player.istempo</visible>
 			<animation type="WindowOpen" condition="!Window.IsActive(seekbar) + !Player.ShowInfo">
 				<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200"/>
 				<effect type="fade" start="0" end="100" time="200"/>
@@ -23,14 +23,14 @@
 
 			<!-- Background -->
 			<control type="image">
-				<width>80</width>
+				<width>140</width>
 				<height>60</height>
 				<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 			</control>
 
 			<!-- Status -->
 			<control type="label">
-				<width>80</width>
+				<width>140</width>
 				<height>60</height>
 				<font>Font36</font>
 				<align>center</align>
@@ -40,7 +40,7 @@
 
 			<!-- Pause -->
 			<control type="image">
-				<left>10</left>
+				<left>40</left>
 				<width>60</width>
 				<height>60</height>
 				<texture>osd/OSDPauseNF.png</texture>
@@ -183,14 +183,70 @@
 				<width>360</width>
 				<height>60</height>
 				<itemgap>0</itemgap>
-				<onleft>12</onleft>
-				<onright>7</onright>
-				<onup>Close</onup>
-				<ondown>Close</ondown>
+				<onleft>15</onleft>
+				<onright>10</onright>
+				<onup>30</onup>
+				<ondown>30</ondown>
 				<orientation>horizontal</orientation>
 
+				<!-- Spacer -->
+				<control type="image" id="40">
+					<left>0</left>
+					<top>0</top>
+					<width>7</width>
+					<height>60</height>
+					<texture>transparent.png</texture>
+				</control>
+
+				<!-- Skip Back -->
+				<control type="button" id="1">
+					<width>9</width>
+					<height>60</height>
+					<onleft>2</onleft>
+					<onright>4</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackwardEnd.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickBackwardEnd.png</texturenofocus>
+					<onclick>PlayerControl(Previous)</onclick>
+				</control>
+				<!-- Rewind -->
+				<control type="togglebutton" id="2">
+					<width>18</width>
+					<height>60</height>
+					<onleft>8</onleft>
+					<onright>10</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickBackward.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</alttexturenofocus>
+					<usealttexture>Control.HasFocus(1)</usealttexture>
+					<onclick>PlayerControl(Rewind)</onclick>
+				</control>
+				<!-- Tempo Down -->
+				<control type="togglebutton" id="3">
+					<width>18</width>
+					<height>60</height>
+					<onleft>8</onleft>
+					<onright>10</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickBackward.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickBackward.png</alttexturenofocus>
+					<usealttexture>Control.HasFocus(1) | Control.HasFocus(2)</usealttexture>
+					<onclick>PlayerControl(TempoDown)</onclick>
+					<enable>Player.TempoEnabled</enable>
+				</control>
+
+				<!-- Spacer -->
+				<control type="image" id="41">
+					<left>0</left>
+					<top>0</top>
+					<width>7</width>
+					<height>60</height>
+					<texture>transparent.png</texture>
+				</control>
+
 				<!-- Play/Pause -->
-				<control type="togglebutton" id="1">
+				<control type="togglebutton" id="4">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDPauseNF.png</texturefocus>
@@ -201,63 +257,78 @@
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<!-- Stop -->
-				<control type="button" id="2">
+				<control type="button" id="5">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDStopNF.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDStopNF.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
-				<!-- Skip Back -->
-				<control type="button" id="3">
-					<width>60</width>
+
+				<!-- Spacer -->
+				<control type="image" id="42">
+					<left>0</left>
+					<top>0</top>
+					<width>7</width>
 					<height>60</height>
-					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDPrevTrackNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDPrevTrackNF.png</texturenofocus>
-					<onclick>PlayerControl(Previous)</onclick>
+					<texture>transparent.png</texture>
 				</control>
-				<!-- Rewind -->
-				<control type="button" id="4">
-					<width>60</width>
+
+				<!-- Tempo Up -->
+				<control type="togglebutton" id="6">
+					<width>18</width>
 					<height>60</height>
-					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDRewindNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDRewindNF.png</texturenofocus>
-					<onclick>PlayerControl(Rewind)</onclick>
+					<onleft>8</onleft>
+					<onright>10</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickForward.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</alttexturenofocus>
+					<usealttexture>Control.HasFocus(7) | Control.HasFocus(8)</usealttexture>
+					<onclick>PlayerControl(TempoUp)</onclick>
+					<enable>Player.TempoEnabled</enable>
 				</control>
 				<!-- Fast Forward -->
-				<control type="button" id="5">
-					<width>60</width>
+				<control type="togglebutton" id="7">
+					<width>18</width>
 					<height>60</height>
-					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDForwardNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDForwardNF.png</texturenofocus>
+					<onleft>8</onleft>
+					<onright>10</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickForward.png</texturenofocus>
+					<alttexturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</alttexturefocus>
+					<alttexturenofocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForward.png</alttexturenofocus>
+					<usealttexture>Control.HasFocus(8)</usealttexture>
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<!-- Next -->
-				<control type="button" id="6">
-					<width>60</width>
+				<control type="button" id="8">
+					<width>9</width>
 					<height>60</height>
-					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDNextTrackNF.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDNextTrackNF.png</texturenofocus>
+					<onleft>7</onleft>
+					<onright>9</onright>
+					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDTrickForwardEnd.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDTrickForwardEnd.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 
 			</control>
 
 			<!-- Options -->
-			<control type="grouplist">
+			<control type="grouplist" id="30">
 				<right>0</right>
 				<width>420</width>
 				<height>60</height>
 				<align>right</align>
 				<itemgap>0</itemgap>
-				<onleft>6</onleft>
+				<onleft>8</onleft>
 				<onright>1</onright>
-				<onup>Close</onup>
-				<ondown>Close</ondown>
+				<onup>4</onup>
+				<ondown>4</ondown>
 				<orientation>horizontal</orientation>
 
 				<!-- Repeat -->
-				<control type="button" id="7">
+				<control type="button" id="10">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus>-</texturefocus>
@@ -265,7 +336,7 @@
 					<onclick>PlayerControl(Repeat)</onclick>
 				</control>
 				<!-- Random -->
-				<control type="togglebutton" id="8">
+				<control type="togglebutton" id="11">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDRandomOffNF.png</texturefocus>
@@ -275,7 +346,7 @@
 					<onclick>PlayerControl(Random)</onclick>
 				</control>
 				<!-- Lyrics -->
-				<control type="button" id="9">
+				<control type="button" id="12">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDLyricsNF.png</texturefocus>
@@ -284,7 +355,7 @@
 					<onclick condition="!String.IsEmpty(Skin.String(LyricAddon))">XBMC.RunScript($INFO[Skin.String(LyricAddon)])</onclick>
 				</control>
 				<!-- Playlist -->
-				<control type="button" id="10">
+				<control type="button" id="13">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDPlaylistNF.png</texturefocus>
@@ -299,7 +370,7 @@
 					<texturenofocus colordiffuse="$VAR[DialogColor2]">osd/OSDVizNF.png</texturenofocus>
 				</control>
 				<!-- Visualisation settings -->
-				<control type="button" id="11">
+				<control type="button" id="14">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDVizSettingsNF.png</texturefocus>
@@ -307,7 +378,7 @@
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 				</control>
 				<!-- Visualisation presets list -->
-				<control type="button" id="12">
+				<control type="button" id="15">
 					<width>60</width>
 					<height>60</height>
 					<texturefocus colordiffuse="$VAR[DialogColor1]">osd/OSDVizPreNF.png</texturefocus>
@@ -328,42 +399,42 @@
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor2]">osd/OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-					<visible>!Control.HasFocus(7)</visible>
+					<visible>!Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor1]">osd/OSDRepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-					<visible>Control.HasFocus(7)</visible>
+					<visible>Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor2]">osd/OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
-					<visible>!Control.HasFocus(7)</visible>
+					<visible>!Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor1]">osd/OSDRepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
-					<visible>Control.HasFocus(7)</visible>
+					<visible>Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor2]">osd/OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
-					<visible>!Control.HasFocus(7)</visible>
+					<visible>!Control.HasFocus(10)</visible>
 				</control>
 				<control type="image">
 					<width>60</width>
 					<height>60</height>
 					<texture colordiffuse="$VAR[DialogColor1]">osd/OSDRepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
-					<visible>Control.HasFocus(7)</visible>
+					<visible>Control.HasFocus(10)</visible>
 				</control>
 
 			</control>
