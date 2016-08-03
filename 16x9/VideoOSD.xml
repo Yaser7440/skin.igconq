@@ -124,7 +124,7 @@
 			</control>
 
 			<!--  Progress bar -->
-			<control type="progress" id="1">
+			<control type="progress">
 				<left>280</left>
 				<top>20</top>
 				<width>920</width>
@@ -138,7 +138,7 @@
 			</control>
 
 			<!--  Cache bar -->
-			<control type="progress" id="1">
+			<control type="progress">
 				<left>280</left>
 				<top>20</top>
 				<width>920</width>
@@ -246,6 +246,16 @@
 					<visible>Player.SeekEnabled</visible>
 					<enable>Player.TempoEnabled</enable>
 				</control>
+
+				<!-- Spacer -->
+				<control type="image" id="41">
+					<left>0</left>
+					<top>0</top>
+					<width>7</width>
+					<height>60</height>
+					<texture>transparent.png</texture>
+				</control>
+
 				<!-- Up -->
 				<control type="button" id="4">
 					<width>60</width>
@@ -258,28 +268,10 @@
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 
-				<!-- Spacer -->
-				<control type="image" id="41">
-					<left>0</left>
-					<top>0</top>
-					<width>7</width>
-					<height>60</height>
-					<texture>transparent.png</texture>
-				</control>
-
 				<!-- Play/Pause -->
 				<include condition="Player.PauseEnabled">OSDPlayStopButtons</include>
 				<!-- Stop -->
 				<include condition="!Player.PauseEnabled">OSDStopButton</include>
-
-				<!-- Spacer -->
-				<control type="image" id="42">
-					<left>0</left>
-					<top>0</top>
-					<width>7</width>
-					<height>60</height>
-					<texture>transparent.png</texture>
-				</control>
 
 				<!-- Down -->
 				<control type="button" id="7">
@@ -292,6 +284,16 @@
 					<onclick>PlayerControl(Next)</onclick>
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
+
+				<!-- Spacer -->
+				<control type="image" id="42">
+					<left>0</left>
+					<top>0</top>
+					<width>7</width>
+					<height>60</height>
+					<texture>transparent.png</texture>
+				</control>
+
 				<!-- Tempo Up -->
 				<control type="togglebutton" id="8">
 					<width>18</width>
