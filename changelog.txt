@@ -1,3 +1,9 @@
+17.1.1   (5th August 2016)
+- Fix displaying uncached fanart for widgets
+- Adjust style of music OSD to match video OSD
+- Add indicators when tempo adjustment is active
+- Rework OSD trick-play controls, including adding tempo adjustment
+
 17.1.0   (1st August 2016)
 - Dark colour fixes
 - Tweak player process info
