@@ -85,42 +85,14 @@
 						<visible>Skin.HasSetting(Overlays)</visible>
 					</control>
 				</control>
-
-				<!-- Season & Episode Info -->
-				<control type="label">
-					<left>0</left>
-					<top>314</top>
-					<width>500</width>
-					<height>45</height>
-					<font>Font42</font>
-					<label>$INFO[ListItem.TVShowTitle]</label>
-					<textcolor>$VAR[TextColor1]</textcolor>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>366</top>
-					<width>450</width>
-					<height>45</height>
-					<font>Font33</font>
-					<textcolor>$VAR[TextColor2]</textcolor>
-					<label>$INFO[ListItem.Title]</label>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>420</top>
-					<width>450</width>
-					<height>45</height>
-					<font>Font30</font>
-					<textcolor>$VAR[TextColor3]</textcolor>
-					<label>$INFO[ListItem.Season,$LOCALIZE[20373] , / ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
-				</control>
-				<!-- Episode Plot -->
+				
+				<!-- Episode Information -->
 				<control type="textbox">
 					<left>0</left>
-					<top>474</top>
+					<top>314</top>
 					<width>450</width>
-					<height>246</height>
-					<label>$VAR[Plot]</label>
+					<height>400</height>
+					<label>$VAR[PVRDescription]</label>
 					<textcolor>$VAR[TextColor1]</textcolor>
 					<shadowcolor>TextColor4</shadowcolor>
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>

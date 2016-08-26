@@ -16,14 +16,9 @@
 			<include>DialogBackgroundImage</include>
 
 			<!-- Heading -->
-			<control type="label">
-				<left>150</left>
-				<top>96</top>
-				<width>1620</width>
-				<height>72</height>
-				<font>Font72</font>
-				<label>19047</label>
-			</control>
+			<include content="Time">
+				<param name="heading">$LOCALIZE[19047]</param>
+			</include>
 
 			<!-- Name -->
 			<control type="label">

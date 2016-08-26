@@ -11,7 +11,7 @@
 
 			<!-- Background -->
 			<control type="image">
-				<width>790</width>
+				<width>1620</width>
 				<height>695</height>
 				<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 			</control>
@@ -22,7 +22,7 @@
 				<top>10</top>
 				<width>750</width>
 				<height>48</height>
-				<font>Font48</font>
+				<font>Font33</font>
 				<textcolor>$VAR[DialogColor1]</textcolor>
 				<label>$INFO[VideoPlayer.ChannelName]</label>
 			</control>
@@ -30,17 +30,31 @@
 			<!-- Date label -->
 			<control type="label" id="2">
 				<left>20</left>
-				<top>66</top>
+				<top>62</top>
 				<width>750</width>
 				<height>36</height>
-				<font>Font36</font>
-				<textcolor>$VAR[DialogColor2]</textcolor>
-				<label>$INFO[Container(11).ListItem.StartDate]</label>
+				<font>Font33</font>
+				<textcolor>$VAR[DialogColor1]</textcolor>
+				<label>[LIGHT]$INFO[Container(11).ListItem.StartDate][/LIGHT]</label>
 			</control>
+			
+			<!-- Episode Information -->
+			<control type="textbox">
+				<left>20</left>
+				<top>160</top>
+				<width>650</width>
+				<height>500</height>
+				<label>$INFO[Container(11).ListItem.TVShowTitle,[B],[/B][CR]]$INFO[Container(11).ListItem.Title,[B],[/B][CR]][LIGHT]$INFO[Container(11).ListItem.Season,$LOCALIZE[20373] , / ]$INFO[Container(11).ListItem.Episode,$LOCALIZE[20359],[CR] ][/LIGHT]$INFO[Container(11).ListItem.Plot]</label>
+				<textcolor>$VAR[TextColor1]</textcolor>
+				<shadowcolor>TextColor4</shadowcolor>
+				<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
+			</control>
+
+
 
 			<!-- List -->
 			<control type="list" id="11">
-				<left>20</left>
+				<left>750</left>
 				<top>116</top>
 				<width>750</width>
 				<height>561</height>

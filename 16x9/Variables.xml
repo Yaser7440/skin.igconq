@@ -55,41 +55,51 @@
 	</variable>
 
 	<variable name="HeadingLabel">
-		<value condition="Container.Content(movies)">$LOCALIZE[342]</value>
-		<value condition="Container.Content(tvshows)">$LOCALIZE[20343]</value>
-		<value condition="Container.Content(seasons)">$LOCALIZE[33054]</value>
-		<value condition="Container.Content(episodes)">$LOCALIZE[20360]</value>
+		<value>$VAR[HeadingLabelPrimary]$VAR[HeadingLabelSecondary]</value>
+	</variable>
+
+	<variable name="HeadingLabelPrimary">
+		<value condition="Container.Content(movies) | [String.StartsWith(Container.FolderPath,videodb://movies/) + !String.EndsWith(Container.FolderPath,videodb://movies/)]">$LOCALIZE[342]</value>
+		<value condition="Container.Content(episodes) + !String.IsEmpty(Container.ShowTitle)">$INFO[Container.ShowTitle]</value>
+		<value condition="Container.Content(tvshows) | [String.StartsWith(Container.FolderPath,videodb://tvshows/) + !String.EndsWith(Container.FolderPath,videodb://tvshows/)]">$LOCALIZE[20343]</value>
+		<!--value condition="Container.Content(seasons)">$LOCALIZE[33054]</value>
+		<value condition="Container.Content(episodes)">$LOCALIZE[20360]</value-->
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[20389]</value>
-		<value condition="Container.Content(genres)">$LOCALIZE[135]</value>
+		<!--value condition="Container.Content(genres)">$LOCALIZE[135]</value>
 		<value condition="Container.Content(years)">$LOCALIZE[652]</value>
 		<value condition="Container.Content(actors)">$LOCALIZE[344]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[132]</value>
 		<value condition="Container.Content(artists)">$LOCALIZE[133]</value>
 		<value condition="Container.Content(songs)">$LOCALIZE[134]</value>
-		<value condition="Container.Content(playlists)">$LOCALIZE[136]</value>
+		<value condition="Container.Content(playlists)">$LOCALIZE[3]</value>
 		<value condition="Container.Content(studios)">$LOCALIZE[20388]</value>
 		<value condition="Container.Content(directors)">$LOCALIZE[20348]</value>
 		<value condition="Container.Content(countries)">$LOCALIZE[20451]</value>
-		<value condition="Container.Content(Addons) + !Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value>
+		<value condition="Container.Content(Addons) + !Window.IsVisible(addonbrowser)">$LOCALIZE[24001]</value-->
 		<value condition="Container.Content(sets)">$LOCALIZE[20434]</value>
 		<value condition="Container.Content(tags)">$LOCALIZE[20459]</value>
-		<value condition="Window.IsVisible(TVChannels)">$LOCALIZE[19020]: $LOCALIZE[19019]</value>
-		<value condition="Window.IsVisible(RadioChannels)">$LOCALIZE[19021]: $LOCALIZE[19019]</value>
-		<value condition="Window.IsVisible(TVGuide)">$LOCALIZE[19020]: $LOCALIZE[22020]</value>
-		<value condition="Window.IsVisible(RadioGuide)">$LOCALIZE[19021]: $LOCALIZE[22020]</value>
-		<value condition="Window.IsVisible(TVRecordings)">$LOCALIZE[19020]: $LOCALIZE[19017]</value>
-		<value condition="Window.IsVisible(RadioRecordings)">$LOCALIZE[19021]: $LOCALIZE[19017]</value>
-		<value condition="Window.IsVisible(TVTimers)">$LOCALIZE[19020]: $LOCALIZE[19040]</value>
-		<value condition="Window.IsVisible(RadioTimers)">$LOCALIZE[19021]: $LOCALIZE[19040]</value>
-		<value condition="Window.IsVisible(TVSearch)">$LOCALIZE[19020]: $LOCALIZE[137]</value>
-		<value condition="Window.IsVisible(RadioSearch)">$LOCALIZE[19021]: $LOCALIZE[137]</value>
+		<value condition="Window.IsVisible(TVChannels)">$LOCALIZE[19020] $LOCALIZE[19019]</value>
+		<value condition="Window.IsVisible(RadioChannels)">$LOCALIZE[19021] $LOCALIZE[19019]</value>
+		<value condition="Window.IsVisible(TVGuide)">$LOCALIZE[19020] $LOCALIZE[22020]</value>
+		<value condition="Window.IsVisible(RadioGuide)">$LOCALIZE[19021] $LOCALIZE[22020]</value>
+		<value condition="Window.IsVisible(TVRecordings)">$LOCALIZE[19020] $LOCALIZE[19017]</value>
+		<value condition="Window.IsVisible(RadioRecordings)">$LOCALIZE[19021] $LOCALIZE[19017]</value>
+		<value condition="Window.IsVisible(TVTimers)">$LOCALIZE[19020] $LOCALIZE[19040]</value>
+		<value condition="Window.IsVisible(RadioTimers)">$LOCALIZE[19021] $LOCALIZE[19040]</value>
+		<value condition="Window.IsVisible(TVSearch)">$LOCALIZE[19020] $LOCALIZE[137]</value>
+		<value condition="Window.IsVisible(RadioSearch)">$LOCALIZE[19021] $LOCALIZE[137]</value>
 		<value condition="Window.IsVisible(Music)">$LOCALIZE[2]</value>
 		<value condition="Window.IsVisible(Videos)">$LOCALIZE[3]</value>
 		<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
 		<value condition="Window.IsVisible(programs)">$LOCALIZE[0]</value>
-		<value condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(skinsettings) | Window.IsVisible(systeminfo) | Window.IsVisible(addonbrowser) | Window.IsVisible(profiles) | Window.IsVisible(filemanager)]">$LOCALIZE[5]</value>
+		<value condition="[Window.IsVisible(settings) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(skinsettings) | Window.IsVisible(systeminfo) | Window.IsVisible(profiles) | Window.IsVisible(filemanager)]">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(addonbrowser)">Add-on Browser</value>
 		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
 		<value condition="Window.IsVisible(eventlog)">$LOCALIZE[14111]</value>
+	</variable>
+
+	<variable name="HeadingLabelSecondary">
+		<value condition="Container.HasParent + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName,: ,]</value>
 	</variable>
 
 	<variable name="PVRChannelIcon">
@@ -191,12 +201,17 @@
 	</variable>
 
 	<variable name="VideoPlayerPlot">
-		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window.Property(shownext))">$INFO[VideoPlayer.NextPlot]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
+		
 		<value>$LOCALIZE[161]</value>
 	</variable>
 
 	<variable name="VideoPlayerTitle">
+		<value condition="VideoPlayer.Content(LiveTV) + String.IsEmpty(Window.Property(shownext))">Now: [B]$INFO[Player.Title][/B] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</value>
+		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window.Property(shownext))">Next: [B]$INFO[VideoPlayer.NextTitle][/B] [LIGHT]($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])[/LIGHT]</value>
+
 		<value condition="!Integer.IsGreater(VideoPlayer.Season,9) + !Integer.IsGreater(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle,, &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
 		<value condition="!Integer.IsGreater(VideoPlayer.Season,9) + Integer.IsGreater(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle,, &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
 		<value condition="Integer.IsGreater(VideoPlayer.Season,9) + Integer.IsGreater(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle,, &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
@@ -207,6 +222,16 @@
 	<variable name="VideoPlayerIcon">
 		<value>$INFO[VideoPlayer.Cover]</value>
 	</variable>
+
+	<variable name="VideoPlayerChannelNumber">
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, (,)]</value>
+	</variable>
+
+	<variable name="VideoPlayerNext">
+		<value condition="VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window.Property(shownext))">Now: $INFO[VideoPlayer.Title] ($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])</value>
+		<value condition="VideoPlayer.Content(LiveTV) + String.IsEmpty(Window.Property(shownext))">Next: $INFO[VideoPlayer.NextTitle] ($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])</value>
+	</variable>
+
 
 	<variable name="StatusOverlay">
 		<value condition="ListItem.IsParentFolder">noop</value>
@@ -566,5 +591,46 @@
 		<value condition="Player.Process(videohwdecoder)">HW</value>
 		<value>SW</value>
 	</variable>
+
+	<!-- PVR Program Description -->
+	<variable name="PVRDescription">
+		<value>$INFO[ListItem.TVShowTitle,[B],[/B][CR]]$INFO[ListItem.Title,[B],[/B][CR]]$VAR[PVRSeasonEpisode,[LIGHT],[/LIGHT][CR]]$VAR[Plot]</value>
+	</variable>
+	<variable name="PVRSeasonEpisode">
+		<value condition="!String.IsEmpty(ListItem.Season)">$INFO[ListItem.Season,$LOCALIZE[20373] , / ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
+	</variable>
+				<!--control type="label">
+					<left>0</left>
+					<top>314</top>
+					<width>500</width>
+					<height>45</height>
+					<font>Font42</font>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<textcolor>$VAR[TextColor1]</textcolor>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>366</top>
+					<width>450</width>
+					<height>45</height>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColor2]</textcolor>
+					<label>$INFO[ListItem.Title]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>420</top>
+					<width>450</width>
+					<height>45</height>
+					<font>Font30</font>
+					<textcolor>$VAR[TextColor3]</textcolor>
+					<label>$INFO[ListItem.Season,$LOCALIZE[20373] , / ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
+				</control>
+				<control type="textbox">
+					<left>0</left>
+					<top>474</top>
+					<width>450</width>
+					<height>246</height>
+					<label>$VAR[Plot]</label-->
 
 </includes>
