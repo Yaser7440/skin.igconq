@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- fullscreeninfo -->
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol>100</defaultcontrol>
 	<animation type="WindowOpen">
 		<effect type="zoom" start="90" end="100" center="auto" tween="back" easing="out" time="200"/>
 		<effect type="fade" start="0" end="100" time="200"/>
@@ -29,18 +29,31 @@
 					<left>20</left>
 					<top>14</top>
 					<width>1280</width>
-					<height>48</height>
-					<font>Font48</font>
+					<height>30</height>
+					<font>Font33</font>
 					<textcolor>$VAR[DialogColor1]</textcolor>
 					<label>$VAR[VideoPlayerTitle]</label>
+				</control>
+
+				<!-- Live TV Start/End Time -->
+				<control type="label">
+					<left>20</left>
+					<top>14</top>
+					<width>1280</width>
+					<height>30</height>
+					<font>Font33</font>
+					<align>right</align>
+					<textcolor>$VAR[DialogColor1]</textcolor>
+					<label>$VAR[VideoPlayerChannelNumber]</label>
+					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 
 				<!-- Plot -->
 				<control type="textbox">
 					<left>20</left>
-					<top>87</top>
+					<top>57</top>
 					<width>1280</width>
-					<height>118</height>
+					<height>165</height>
 					<label>$VAR[VideoPlayerPlot]</label>
 					<font>Font25</font>
 					<textcolor>$VAR[DialogColor2]</textcolor>
@@ -55,6 +68,45 @@
 					<height>194</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture>$VAR[VideoPlayerIcon]</texture>
+				</control>
+
+				<!-- Live TV next information -->
+				<control type="group">
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="image">
+						<width>1620</width>
+						<height>40</height>
+						<top>249</top>
+						<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
+					</control>
+
+					<control type="label">
+						<width>1280</width>
+						<height>40</height>
+						<top>249</top>
+						<left>20</left>
+						<label>$VAR[VideoPlayerNext]</label>
+						<font>Font25</font>
+					</control>
+
+					<control type="label">
+						<width>1580</width>
+						<height>40</height>
+						<top>249</top>
+						<left>20</left>
+						<align>right</align>
+						<label>[LIGHT]Press Select for details[/LIGHT]</label>
+						<font>Font25</font>
+					</control>
+
+					<control type="button" id="100">
+						<left>0</left>
+						<top>249</top>
+						<width>1620</width>
+						<height>40</height>
+						<onclick condition="String.IsEmpty(Window.Property(shownext))">SetProperty(shownext,True)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(shownext))">ClearProperty(shownext)</onclick>
+					</control>
 				</control>
 
 			</control>
