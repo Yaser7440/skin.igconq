@@ -5,18 +5,21 @@
 
 	<controls>
 
-		<!-- Background -->
-		<control type="image">
-			<left>0</left>
-			<top>220</top>
-			<width>1920</width>
-			<height>860</height>
-			<texture border="20">dialogs/DialogBackground.png</texture>
-		</control>
+		<include condition="!Window.IsVisible(FullScreenVideo)">WindowFadeBackgroundImage</include>
+
+		<!-- Animation -->
+		<include>DialogZoomAnimation</include>
+
+		<!-- Dialog Background -->
+		<include>DialogBackgroundImage</include>
 
 		<!-- Heading -->
+		<include content="Time">
+			<param name="heading">$INFO[Control.GetLabel(1)]</param>
+		</include>
+		
 		<control type="label" id="1">
-			<left>150</left>
+			<left>-1500000</left>
 			<top>296</top>
 			<width>1620</width>
 			<height>72</height>
