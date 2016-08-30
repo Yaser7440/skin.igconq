@@ -1,3 +1,9 @@
+17.1.2.  (30th August 2016)
+- Tweak video OSD controls
+- Updates to PVR views
+- More detailed headers
+- Minor fixes
+
 17.1.1   (5th August 2016)
 - Fix displaying uncached fanart for widgets
 - Adjust style of music OSD to match video OSD
