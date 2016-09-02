@@ -164,16 +164,6 @@
 
 
 				<!-- Background -->
-				<!-- Custom image -->
-				<control type="button" id="1101">
-					<width>1050</width>
-					<height>66</height>
-					<onup>101</onup>
-					<textwidth>1120</textwidth>
-					<label>31064</label>
-					<onclick>Skin.SetFile(CustomBackgroundImage,,special://skin/extras/backgrounds/)</onclick>
-					<visible>ControlGroup(9).HasFocus(11)</visible>
-				</control>
 				<!-- Background video -->
 				<control type="radiobutton" id="1102">
 					<width>1050</width>

@@ -110,7 +110,6 @@
 	<variable name="BackgroundImage">
 		<value condition="String.IsEqual(Window.Property(xmlfile),Home.xml) + !String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
 		<value condition="String.IsEqual(Window.Property(xmlfile),custom_1111_Hub.xml) + !String.IsEmpty(Window(Home).Property(currentBackground))">$INFO[Window(Home).Property(currentBackground)]</value>
-		<value condition="!String.IsEmpty(Skin.String(CustomBackgroundImage))">$INFO[Skin.String(CustomBackgroundImage)]</value>
 		<value>special://skin/extras/backgrounds/Default.jpg</value>
 	</variable>
 
