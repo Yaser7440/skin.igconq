@@ -137,14 +137,6 @@
 						<height>52</height>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
-					<!-- Watched status -->
-					<control type="radiobutton" id="95">
-						<label>536</label>
-						<height>52</height>
-						<onclick>Skin.ToggleSetting(WatchedFlags)</onclick>
-						<selected>Skin.HasSetting(WatchedFlags)</selected>
-						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-					</control>
 					<!-- Scrollbars -->
 					<control type="radiobutton" id="94">
 						<label>31005</label>

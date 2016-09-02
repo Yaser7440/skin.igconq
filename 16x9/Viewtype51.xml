@@ -153,7 +153,6 @@
 						<texture>$VAR[StatusOverlay]</texture>
 						<colordiffuse>OverlayColorNF</colordiffuse>
 						<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
-						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</itemlayout>
 
@@ -189,7 +188,6 @@
 						<texture>$VAR[StatusOverlay]</texture>
 						<colordiffuse>OverlayColorFO</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="true" condition="!Control.HasFocus(51)">Conditional</animation>
-						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</focusedlayout>
 

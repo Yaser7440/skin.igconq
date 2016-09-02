@@ -51,7 +51,6 @@
 						<width>35</width>
 						<height>49</height>
 						<texture>$VAR[StatusOverlayWide]</texture>
-						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</itemlayout>
 
@@ -73,7 +72,6 @@
 							<width>35</width>
 							<height>49</height>
 							<texture>$VAR[StatusOverlayWide]</texture>
-							<visible>Skin.HasSetting(WatchedFlags)</visible>
 						</control>
 					</control>
 				</focusedlayout>
