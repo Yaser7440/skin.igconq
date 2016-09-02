@@ -125,13 +125,6 @@
 						<label>$INFO[Container.ViewMode]</label>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
-					<!-- Fanart -->
-					<control type="radiobutton" id="98">
-						<height>52</height>
-						<label>20445</label>
-						<onclick>Skin.ToggleSetting(MusicFanart)</onclick>
-						<selected>Skin.HasSetting(MusicFanart)</selected>
-					</control>
 					<!-- Scrollbars -->
 					<control type="radiobutton" id="94">
 						<height>52</height>

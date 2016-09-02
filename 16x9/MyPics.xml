@@ -17,7 +17,6 @@
 			<fadetime>400</fadetime>
 			<colordiffuse>FanartDiffuse</colordiffuse>
 			<texture background="true">$INFO[ListItem.FileNameAndPath]</texture>
-			<visible>Skin.HasSetting(PictureFanart)</visible>
 		</control>
 
 		<!-- Main group -->
@@ -101,13 +100,6 @@
 						<height>52</height>
 						<label>$INFO[Container.ViewMode]</label>
 						<onclick>Container.NextViewMode</onclick>
-					</control>
-					<!-- Fanart -->
-					<control type="radiobutton" id="98">
-						<height>52</height>
-						<label>20445</label>
-						<onclick>Skin.ToggleSetting(PictureFanart)</onclick>
-						<selected>Skin.HasSetting(PictureFanart)</selected>
 					</control>
 					<!-- Scrollbars -->
 					<control type="radiobutton" id="94">

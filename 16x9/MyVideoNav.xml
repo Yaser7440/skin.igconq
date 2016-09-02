@@ -137,22 +137,6 @@
 						<height>52</height>
 						<onclick>Container.NextViewMode</onclick>
 					</control>
-					<!-- Fanart -->
-					<control type="radiobutton" id="98">
-						<label>20445</label>
-						<height>52</height>
-						<onclick>Skin.ToggleSetting(MovieFanart)</onclick>
-						<selected>Skin.HasSetting(MovieFanart)</selected>
-						<visible>Container.Content(Movies)</visible>
-					</control>
-					<!-- Fanart -->
-					<control type="radiobutton" id="97">
-						<label>20445</label>
-						<height>52</height>
-						<onclick>Skin.ToggleSetting(TVFanart)</onclick>
-						<selected>Skin.HasSetting(TVFanart)</selected>
-						<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
-					</control>
 					<!-- Watched status -->
 					<control type="radiobutton" id="95">
 						<label>536</label>

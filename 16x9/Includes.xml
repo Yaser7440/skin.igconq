@@ -139,8 +139,6 @@
 				<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 				<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 			</control>
-
-			<visible>[Skin.HasSetting(MovieFanart) + Container.Content(Movies)] | [Skin.HasSetting(TVFanart) + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Skin.HasSetting(MusicFanart) + Window.IsVisible(Music)] | [Skin.HasSetting(WeatherFanart) + Window.IsVisible(weather)] | [Skin.HasSetting(AddonFanart) + [Container.Content(Addons) | Window.IsVisible(addonbrowser)]]</visible>
 		</control>
 	</include>
 
