@@ -100,6 +100,13 @@
 
 	<variable name="HeadingLabelSecondary">
 		<value condition="Container.HasParent + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName,: ,]</value>
+		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[31074]</value>
+		<value condition="Window.IsActive(PlayerSettings)">$LOCALIZE[16003]</value>
+		<value condition="Window.IsActive(MediaSettings)">$LOCALIZE[14211]</value>
+		<value condition="Window.IsActive(PVRSettings)">$LOCALIZE[31015]</value>
+		<value condition="Window.IsActive(ServiceSettings)">$LOCALIZE[14036]</value>
+		<value condition="Window.IsActive(SystemSettings)">$LOCALIZE[13000]</value>
+		<value condition="Window.IsActive(SystemInfo)">$LOCALIZE[130]</value>
 	</variable>
 
 	<variable name="PVRChannelIcon">
