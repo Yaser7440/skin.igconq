@@ -374,6 +374,14 @@
 						<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 					</control>
 
+					<control type="button">
+						<left>0</left>
+						<top>0</top>
+						<width>460</width>
+						<height>1080</height>
+						<onclick>noop</onclick>
+					</control>
+
 					<!-- Look controls -->
 					<control type="grouplist" id="3001">
 						<left>20</left>
@@ -388,7 +396,6 @@
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
 						<defaultcontrol always="true">99</defaultcontrol>
-						<visible allowhiddenfocus="true">ControlGroup(3001).HasFocus()</visible>
 
 						<include content="SideMenuAnimation">
 							<param name="containerID">3001</param>
