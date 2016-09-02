@@ -23,25 +23,10 @@
 					<left>120</left>
 					<top>225</top>
 					<width>405</width>
-					<height>666</height>
-					<texture border="1,1,1,69">views/DropShadow.png</texture>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>225</top>
-					<width>405</width>
 					<height>600</height>
 					<fadetime>200</fadetime>
 					<texture>$VAR[animatedPosterIcon]</texture>
 					<aspectratio aligny="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>225</top>
-					<width>405</width>
-					<height>600</height>
-					<texture>views/OverlayAlbum.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
 				</control>
 			</control>
 
@@ -52,25 +37,10 @@
 					<left>120</left>
 					<top>322</top>
 					<width>405</width>
-					<height>471</height>
-					<texture border="1,1,1,69">views/DropShadow.png</texture>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>322</top>
-					<width>405</width>
 					<height>405</height>
 					<fadetime>200</fadetime>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<left>120</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<texture>views/OverlayPosterFO.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
 				</control>
 			</control>
 
@@ -98,25 +68,10 @@
 						<left>0</left>
 						<top>0</top>
 						<width>452</width>
-						<height>352</height>
-						<texture border="1,1,1,69">views/DropShadow.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>452</width>
 						<height>286</height>
 						<fadetime>200</fadetime>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio aligny="center">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>452</width>
-						<height>286</height>
-						<texture>views/OverlayEpisode.png</texture>
-						<visible>Skin.HasSetting(Overlays)</visible>
 					</control>
 				</control>
 

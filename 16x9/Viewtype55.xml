@@ -37,43 +37,18 @@
 						<left>34</left>
 						<width>202</width>
 						<height>202</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<colordiffuse>OverlayColorNF</colordiffuse>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
+						<colordiffuse>DiffusePosterNF</colordiffuse>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center">scale</aspectratio>
 					</control>
-					<control type="group">
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>235</height>
-							<texture border="1,1,1,36">views/DropShadowSmall.png</texture>
-						</control>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>202</height>
-							<colordiffuse>DiffusePosterNF</colordiffuse>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio align="center">scale</aspectratio>
-						</control>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>202</height>
-							<texture>views/OverlayPosterNF.png</texture>
-							<visible>Skin.HasSetting(Overlays)</visible>
-						</control>
-						<!-- Watched status -->
-						<control type="image">
-							<left>177</left>
-							<top>452</top>
-							<width>35</width>
-							<height>49</height>
-							<texture>$VAR[StatusOverlayWide]</texture>
-							<visible>Skin.HasSetting(WatchedFlags)</visible>
-						</control>
+					<!-- Watched status -->
+					<control type="image">
+						<left>177</left>
+						<top>452</top>
+						<width>35</width>
+						<height>49</height>
+						<texture>$VAR[StatusOverlayWide]</texture>
+						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</itemlayout>
 
@@ -82,41 +57,24 @@
 						<left>34</left>
 						<width>202</width>
 						<height>202</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio align="center">scale</aspectratio>
 					</control>
-					<control type="group">
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>235</height>
-							<texture border="1,1,1,36">views/DropShadowSmall.png</texture>
-						</control>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>202</height>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<aspectratio align="center">scale</aspectratio>
-						</control>
-						<control type="image">
-							<left>34</left>
-							<width>202</width>
-							<height>202</height>
-							<texture>views/OverlayPosterNF.png</texture>
-							<visible>Skin.HasSetting(Overlays)</visible>
-						</control>
-						<!-- Watched status -->
-						<control type="image">
-							<left>177</left>
-							<top>452</top>
-							<width>35</width>
-							<height>49</height>
-							<texture>$VAR[StatusOverlayWide]</texture>
-							<visible>Skin.HasSetting(WatchedFlags)</visible>
-						</control>
+					<control type="image">
+						<left>34</left>
+						<width>202</width>
+						<height>202</height>
+						<texture>views/OverlayPosterNF.png</texture>
+						<visible>Skin.HasSetting(Overlays)</visible>
+					</control>
+					<!-- Watched status -->
+					<control type="image">
+						<left>177</left>
+						<top>452</top>
+						<width>35</width>
+						<height>49</height>
+						<texture>$VAR[StatusOverlayWide]</texture>
+						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</focusedlayout>
 			</control>

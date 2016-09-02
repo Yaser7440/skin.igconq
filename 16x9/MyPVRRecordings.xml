@@ -34,8 +34,6 @@
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Poster)]</texture>
 					<aspectratio align="center">keep</aspectratio>
-					<bordertexture border="1,1,1,36">views/DropShadowSmall.png</bordertexture>
-					<bordersize>0,0,0,33</bordersize>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster))</visible>
 				</control>
 				<control type="image">
@@ -46,8 +44,6 @@
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[Window(Home).Property(SkinHelper.PVR.Thumb)]</texture>
 					<aspectratio align="center">keep</aspectratio>
-					<bordertexture border="1,1,1,36">views/DropShadowSmall.png</bordertexture>
-					<bordersize>0,0,0,33</bordersize>
 					<visible>String.IsEmpty(Window(Home).Property(SkinHelper.PVR.Poster)) + !String.IsEmpty(Window(Home).Property(SkinHelper.PVR.Thumb))</visible>
 				</control>
 			</control>
@@ -59,31 +55,14 @@
 				<visible>!String.IsEmpty(Container(50).ListItem.Plot) | String.IsEqual(Container(50).ListItem.Label,..)</visible>
 
 				<!-- Episode image -->
-				<control type="group">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>452</width>
-						<height>352</height>
-						<texture border="1,1,1,69">views/DropShadow.png</texture>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>452</width>
-						<height>286</height>
-						<fadetime>200</fadetime>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio aligny="center">scale</aspectratio>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>452</width>
-						<height>286</height>
-						<texture>views/OverlayEpisode.png</texture>
-						<visible>Skin.HasSetting(Overlays)</visible>
-					</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>452</width>
+					<height>286</height>
+					<fadetime>200</fadetime>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio aligny="center">scale</aspectratio>
 				</control>
 				
 				<!-- Episode Information -->

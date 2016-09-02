@@ -153,13 +153,6 @@
 						<selected>Skin.HasSetting(TVFanart)</selected>
 						<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 					</control>
-					<!-- Overlays -->
-					<control type="radiobutton" id="96">
-						<label>31006</label>
-						<height>52</height>
-						<onclick>Skin.ToggleSetting(Overlays)</onclick>
-						<selected>Skin.HasSetting(Overlays)</selected>
-					</control>
 					<!-- Watched status -->
 					<control type="radiobutton" id="95">
 						<label>536</label>

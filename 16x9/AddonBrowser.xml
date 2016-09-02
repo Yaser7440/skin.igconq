@@ -254,32 +254,10 @@
 				<left>120</left>
 				<top>225</top>
 				<width>405</width>
-				<height>666</height>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<aspectratio aligny="center">keep</aspectratio>
-				<bordertexture border="1,1,1,69">views/DropShadow.png</bordertexture>
-				<bordersize>0,0,0,66</bordersize>
-				<visible>!String.Contains(ListItem.Icon,Default)</visible>
-			</control>
-			<control type="image">
-				<left>120</left>
-				<top>225</top>
-				<width>405</width>
-				<height>600</height>
-				<texture colordiffuse="00ffffff">$INFO[ListItem.Icon]</texture>
-				<aspectratio aligny="center">keep</aspectratio>
-				<bordertexture border="21,21,21,150">views/OverlayEffect.png</bordertexture>
-				<visible>!String.Contains(ListItem.Icon,Default) + Skin.HasSetting(Overlays)</visible>
-			</control>
-			<control type="image">
-				<left>120</left>
-				<top>225</top>
-				<width>405</width>
 				<height>600</height>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>OverlayColorFO</colordiffuse>
 				<aspectratio aligny="center">keep</aspectratio>
-				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
 
 			<!-- List -->
@@ -428,13 +406,6 @@
 							<label>20445</label>
 							<onclick>Skin.ToggleSetting(AddonFanart)</onclick>
 							<selected>Skin.HasSetting(AddonFanart)</selected>
-						</control>
-						<!-- Overlays -->
-						<control type="radiobutton" id="96">
-							<height>52</height>
-							<label>31006</label>
-							<onclick>Skin.ToggleSetting(Overlays)</onclick>
-							<selected>Skin.HasSetting(Overlays)</selected>
 						</control>
 						<!-- Scrollbars -->
 						<control type="radiobutton" id="94">

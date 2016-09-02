@@ -109,13 +109,6 @@
 						<onclick>Skin.ToggleSetting(PictureFanart)</onclick>
 						<selected>Skin.HasSetting(PictureFanart)</selected>
 					</control>
-					<!-- Overlays -->
-					<control type="radiobutton" id="96">
-						<height>52</height>
-						<label>31006</label>
-						<onclick>Skin.ToggleSetting(Overlays)</onclick>
-						<selected>Skin.HasSetting(Overlays)</selected>
-					</control>
 					<!-- Scrollbars -->
 					<control type="radiobutton" id="94">
 						<height>52</height>

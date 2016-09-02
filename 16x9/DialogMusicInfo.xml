@@ -20,73 +20,7 @@
 				<param name="heading">$VAR[MusicInfoLabel]</param>
 			</include>
 
-			<!-- Song Image -->
-			<control type="group">
-				<visible>Window.Is(songinformation) + !String.Contains(ListItem.Icon,Default)</visible>
-				<control type="image">
-					<left>150</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<fadetime>200</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio aligny="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<left>150</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<texture>views/OverlayAlbum.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
-				</control>
-			</control>
-
-			<!-- Album image -->
-			<control type="group">
-				<visible>!String.Contains(ListItem.Icon,Default) + Container.Content(albums)</visible>
-				<control type="image">
-					<left>150</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<fadetime>200</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio aligny="center">scale</aspectratio>
-				</control>
-				<control type="image">
-					<left>150</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<texture>views/OverlayAlbum.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
-				</control>
-			</control>
-
-			<!-- Artist image -->
-			<control type="group">
-				<visible>!String.Contains(ListItem.Icon,Default) + Container.Content(artists)</visible>
-				<control type="image">
-					<left>150</left>
-					<top>225</top>
-					<width>405</width>
-					<height>666</height>
-					<fadetime>200</fadetime>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<aspectratio aligny="center">keep</aspectratio>
-				</control>
-				<control type="image">
-					<left>150</left>
-					<top>225</top>
-					<width>405</width>
-					<height>666</height>
-					<texture>views/OverlayPosterFO.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
-				</control>
-			</control>
-
-			<!-- Default image -->
+			<!-- Image -->
 			<control type="image">
 				<left>150</left>
 				<top>225</top>
@@ -95,7 +29,6 @@
 				<texture>$INFO[ListItem.Icon]</texture>
 				<colordiffuse>OverlayColorFO</colordiffuse>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<visible>String.Contains(ListItem.Icon,Default)</visible>
 			</control>
 
 			<!-- Info -->

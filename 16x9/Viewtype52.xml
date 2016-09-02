@@ -40,71 +40,24 @@
 						<top>135</top>
 						<width>225</width>
 						<height>333</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<colordiffuse>OverlayColorNF</colordiffuse>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
+						<colordiffuse>DiffusePosterNF</colordiffuse>
+						<texture background="true">$VAR[animatedPosterThumb]</texture>
+						<aspectratio align="center">scale</aspectratio>
 					</control>
-					<control type="group">
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
-						<control type="image">
-							<left>23</left>
-							<top>135</top>
-							<width>225</width>
-							<height>366</height>
-							<texture border="1,1,1,36">views/DropShadowSmall.png</texture>
-						</control>
-						<control type="image">
-							<left>23</left>
-							<top>135</top>
-							<width>225</width>
-							<height>333</height>
-							<colordiffuse>DiffusePosterNF</colordiffuse>
-							<texture background="true">$VAR[animatedPosterThumb]</texture>
-							<aspectratio align="center">scale</aspectratio>
-						</control>
-						<control type="image">
-							<left>23</left>
-							<top>135</top>
-							<width>225</width>
-							<height>333</height>
-							<texture>views/OverlayPosterNF.png</texture>
-							<visible>Skin.HasSetting(Overlays)</visible>
-						</control>
-						<!-- Watched status -->
-						<control type="image">
-							<left>177</left>
-							<top>452</top>
-							<width>35</width>
-							<height>49</height>
-							<texture>$VAR[StatusOverlayWide]</texture>
-							<visible>Skin.HasSetting(WatchedFlags)</visible>
-						</control>
+					<!-- Watched status -->
+					<control type="image">
+						<left>177</left>
+						<top>452</top>
+						<width>35</width>
+						<height>49</height>
+						<texture>$VAR[StatusOverlayWide]</texture>
+						<visible>Skin.HasSetting(WatchedFlags)</visible>
 					</control>
 				</itemlayout>
 
 				<focusedlayout width="405" height="666">
-					<control type="image">
-						<left>11</left>
-						<top>0</top>
-						<width>405</width>
-						<height>600</height>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<colordiffuse>OverlayColorFO</colordiffuse>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<animation effect="zoom" start="60" end="100" center="202,300" time="300" tween="back" easing="out" reversible="false">Focus</animation>
-						<visible>String.Contains(ListItem.Icon,Default)</visible>
-					</control>
 					<control type="group">
-						<visible>!String.Contains(ListItem.Icon,Default)</visible>
 						<animation effect="zoom" start="60" end="100" center="202,300" time="300" tween="back" easing="out" reversible="false">Focus</animation>
-						<control type="image">
-							<left>11</left>
-							<top>0</top>
-							<width>405</width>
-							<height>666</height>
-							<texture border="1,1,1,69">views/DropShadow.png</texture>
-						</control>
 						<control type="image">
 							<left>11</left>
 							<top>0</top>
@@ -112,14 +65,6 @@
 							<height>600</height>
 							<texture background="true">$VAR[animatedPosterThumb]</texture>
 							<aspectratio align="center">scale</aspectratio>
-						</control>
-						<control type="image">
-							<left>11</left>
-							<top>0</top>
-							<width>405</width>
-							<height>600</height>
-							<texture>views/OverlayPosterFO.png</texture>
-							<visible>Skin.HasSetting(Overlays)</visible>
 						</control>
 						<!-- Watched status -->
 						<control type="image">

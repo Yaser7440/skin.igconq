@@ -30,14 +30,6 @@
 					<texture>$INFO[ListItem.Icon]</texture>
 					<aspectratio aligny="center">keep</aspectratio>
 				</control>
-				<control type="image">
-					<left>150</left>
-					<top>322</top>
-					<width>405</width>
-					<height>405</height>
-					<texture border="21,21,21,150">views/OverlayEffect.png</texture>
-					<visible>Skin.HasSetting(Overlays)</visible>
-				</control>
 			</control>
 
 			<!-- Info -->

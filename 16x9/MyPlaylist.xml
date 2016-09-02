@@ -113,13 +113,6 @@
 						<label>-</label>
 						<onfocus>Down</onfocus>
 					</control>
-					<!-- Overlays -->
-					<control type="radiobutton" id="96">
-						<include>OptionButtons</include>
-						<label>31006</label>
-						<onclick>Skin.ToggleSetting(Overlays)</onclick>
-						<selected>Skin.HasSetting(Overlays)</selected>
-					</control>
 					<!-- Scrollbars -->
 					<control type="radiobutton" id="94">
 						<include>OptionButtons</include>
