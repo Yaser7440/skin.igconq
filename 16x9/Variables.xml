@@ -483,18 +483,6 @@
 		<value>$INFO[Container(7002).ListItem.Label]</value>
 	</variable>
 
-	<!-- Animated posters - Icon image as fallback -->
-	<variable name="animatedPosterIcon">
-		<value condition="Skin.HasSetting(AnimatedPosters) + !String.IsEqual(ListItem.Art(animatedposter),)">$INFO[ListItem.Art(animatedposter)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-
-	<!-- Animated posters - Thumb image as fallback, not using window property -->
-	<variable name="animatedPosterThumb">
-		<value condition="Skin.HasSetting(AnimatedPosters) + !String.IsEqual(ListItem.Art(animatedposter),)">$INFO[ListItem.Art(animatedposter)]</value>
-		<value>$INFO[ListItem.Thumb]</value>
-	</variable>
-
 	<!-- Variables for script-skinshortcuts.xml -->
 	<variable name="skinshortcuts-window">
 		<value condition="String.EndsWith(Window.Property(groupname),.1)">Customise Hub Widgets</value>

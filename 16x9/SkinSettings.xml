@@ -331,25 +331,6 @@
 					<selected>Skin.HasSetting(KioskMode)</selected>
 					<visible>ControlGroup(9).HasFocus(12)</visible>
 				</control>
-				<!-- Animated posters -->
-				<control type="radiobutton" id="1307">
-					<width>1050</width>
-					<height>66</height>
-					<textwidth>1120</textwidth>
-					<label>[COLOR dimgray](Experimental)[/COLOR] Display animated posters</label>
-					<onclick>Skin.ToggleSetting(AnimatedPosters)</onclick>
-					<selected>Skin.HasSetting(AnimatedPosters)</selected>
-					<visible>ControlGroup(9).HasFocus(12)</visible>
-				</control>
-				<control type="radiobutton" id="1308">
-					<width>1050</width>
-					<height>66</height>
-					<textwidth>1120</textwidth>
-					<label>[COLOR dimgray](Experimental)[/COLOR] Automatically fetch animated posters</label>
-					<onclick>Skin.ToggleSetting(DownloadAnimatedPosters)</onclick>
-					<selected>Skin.HasSetting(DownloadAnimatedPosters)</selected>
-					<visible>ControlGroup(9).HasFocus(12)</visible>
-				</control>
 
 
 				<!-- Addons -->
