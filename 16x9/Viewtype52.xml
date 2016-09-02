@@ -102,10 +102,11 @@
 					<left>90</left>
 					<top>88</top>
 					<width>1740</width>
-					<height>27</height>
+					<height>54</height>
 					<font>Font27</font>
 					<align>center</align>
-					<label>$VAR[Label2]</label>
+					<aligny>top</aligny>
+					<label>$VAR[Label2]$VAR[Label3,[CR],]</label>
 					<textcolor>$VAR[TextColor2]</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>

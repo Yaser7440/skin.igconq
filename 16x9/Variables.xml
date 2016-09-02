@@ -384,6 +384,16 @@
 		<value condition="Container.Content(songs) + String.IsEmpty(ListItem.Album) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 	</variable>
 
+	<variable name="Label3">
+		<value>$INFO[ListItem.VideoCodec,[LIGHT]Video[/LIGHT] ,]$INFO[ListItem.VideoResolution, ,p]$INFO[ListItem.AudioCodec,   [LIGHT]Audio[/LIGHT] ,]$VAR[AudioChannels, ,]</value>
+	</variable>
+
+	<variable name="AudioChannels">
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,1)">Mono</value>
+		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">Stereo</value>
+		<value condition="Integer.IsGreater(ListItem.AudioChannels,2)">Surround</value>
+	</variable>
+
 	<variable name="ContentType">
 		<value condition="Container.Content(movies) + !Integer.IsGreater(Container.NumItems,1)">$LOCALIZE[20338]</value>
 		<value condition="Container.Content(movies) + Integer.IsGreater(Container.NumItems,1)">$LOCALIZE[342]</value>
