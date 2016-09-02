@@ -38,18 +38,18 @@
 				<onleft>60</onleft>
 				<onright condition="!Skin.HasSetting(KioskMode)">3001</onright>
 				<pagecontrol>60</pagecontrol>
-				<focusposition>3</focusposition>
+				<focusposition>5</focusposition>
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<visible>Window.IsVisible(Music) | [Container.Content(songs) + Window.IsVisible(musicplaylist)] | [!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs) + !Window.IsVisible(pictures)]</visible>
 
-				<itemlayout height="90" width="1050">
+				<itemlayout height="60" width="1050">
 					<control type="label">
 						<left>32</left>
 						<top>0</top>
 						<width>1018</width>
-						<height>90</height>
+						<height>60</height>
 						<font>Font36</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TextColor2]</textcolor>
@@ -57,7 +57,7 @@
 					<!-- Watched status -->
 					<control type="image">
 						<left>0</left>
-						<top>38</top>
+						<top>23</top>
 						<width>14</width>
 						<height>14</height>
 						<texture>$VAR[StatusOverlay]</texture>
@@ -66,12 +66,12 @@
 					</control>
 				</itemlayout>
 
-				<focusedlayout height="180" width="1050">
+				<focusedlayout height="120" width="1050">
 					<control type="label">
 						<left>32</left>
 						<top>0</top>
 						<width>1018</width>
-						<height>180</height>
+						<height>120</height>
 						<font>Font72</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TextColor1]</textcolor>
@@ -81,7 +81,7 @@
 					<!-- Watched status -->
 					<control type="image">
 						<left>0</left>
-						<top>61</top>
+						<top>53</top>
 						<width>14</width>
 						<height>14</height>
 						<texture>$VAR[StatusOverlay]</texture>
