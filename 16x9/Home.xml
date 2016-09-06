@@ -5,17 +5,9 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 
 	<!-- Skin Shortcuts -->
-	<onload condition="String.IsEmpty(Skin.String(menuStyle)) | String.IsEqual(Skin.String(menuStyle),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1&amp;minitems=20)</onload>
-	<onload condition="!String.IsEmpty(Skin.String(menuStyle))">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1)</onload>
-
-	<!-- Set correct control as focused in cross-bar homescreen -->
-	<include condition="String.IsEqual(Skin.String(menuStyle),lumos)">skinshortcuts-template-lumos-onload</include>
-	
-	<!-- Smart(ish) Widgets -->
-	<onload>Skin.SetBool(enable.smartish.widgets)</onload>
+	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1&amp;minitems=20)</onload>
 
 	<!-- Skin Helper Service -->
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 
 	<controls>
@@ -55,9 +47,7 @@
 		<!-- Home layout -->
 		<control type="group">
 			<include>WindowFadeAnimation</include>
-			<include condition="String.IsEmpty(Skin.String(menuStyle)) | String.IsEqual(Skin.String(menuStyle),vertical)">HomeDefault</include>
-			<include condition="String.IsEqual(Skin.String(menuStyle),horizontal)">HomeHorizontal</include>
-			<include condition="String.IsEqual(Skin.String(menuStyle),lumos)">HomeLumos</include>
+			<include>HomeDefault</include>
 		</control>
 
 		<!-- Test labels -->

@@ -8,11 +8,7 @@
 			<include condition="!Skin.HasSetting(SmallMainMenu)">LargeMainMenu</include>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
-			<onleft>SetProperty(currentMenu,$INFO[Container(9000).ListItem.Property(submenuVisibility)],Home)</onleft>
-			<onleft>SetProperty(currentMenu.1,$INFO[Container(9000).ListItem.Property(submenuVisibility),,.1],Home)</onleft>
-			<onleft>SetProperty(currentName,$INFO[Container(9000).ListItem.Label],Home)</onleft>
-			<onleft condition="Skin.HasSetting(enableHubs)">ActivateWindow(1111)</onleft>
-			<onleft condition="!Skin.HasSetting(enableHubs)">9001</onleft>
+			<onleft>9001</onleft>
 			<onright>9002</onright>
 			<orientation>vertical</orientation>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
@@ -43,7 +39,7 @@
 						<height>120</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font42</font>
-						<textcolor>HomeNF</textcolor>
+						<textcolor>$VAR[TextColor2]</textcolor>
 					</control>
 
 				</control>
@@ -95,7 +91,7 @@
 					<height>72</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font30</font>
-					<textcolor>HomeNF</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 				</control>
 			</itemlayout>
 

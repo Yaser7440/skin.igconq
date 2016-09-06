@@ -2,8 +2,7 @@
 <window>
 	<!-- skinsettings -->
 	<defaultcontrol always="true">9</defaultcontrol>
-	<onunload condition="String.IsEmpty(Skin.String(menuStyle)) | String.IsEqual(Skin.String(menuStyle),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1&amp;minitems=20)</onunload>
-	<onunload condition="!String.IsEqual(Skin.String(menuStyle),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|igconq-quicknav&amp;levels=1&amp;minitems=20)</onunload>
 
 	<controls>
 
@@ -122,20 +121,6 @@
 					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 					<visible>ControlGroup(9).HasFocus(10)</visible>
 				</control>
-				<!-- Main menu style -->
-				<control type="button" id="1002">
-					<width>1220</width>
-					<height>66</height>
-					<textwidth>1120</textwidth>
-					<font>Font33</font>
-					<onclick condition="String.IsEmpty(Skin.String(menuStyle))">Skin.SetString(menuStyle,horizontal)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(menuStyle),horizontal)">Skin.SetString(menuStyle,lumos)</onclick>
-					<onclick condition="String.IsEqual(Skin.String(menuStyle),lumos)">Skin.Reset(menuStyle)</onclick>
-					<onclick>SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onclick>
-					<label>$LOCALIZE[31037]</label>
-					<label2>$VAR[menuStyle]</label2>
-					<visible>ControlGroup(9).HasFocus(10)</visible>
-				</control>
 				<!-- Small main menu -->
 				<control type="radiobutton" id="1003">
 					<width>1220</width>
@@ -159,18 +144,6 @@
 					<selected>Skin.HasSetting(HideSubmenuHeading)</selected>
 					<visible>ControlGroup(9).HasFocus(10)</visible>
 					<visible>String.IsEmpty(Skin.String(menuStyle)) | String.IsEqual(Skin.String(menuStyle),horizontal)</visible>
-				</control>
-				<!-- Enable Hubs -->
-				<control type="radiobutton" id="1005">
-					<width>1220</width>
-					<height>66</height>
-					<textwidth>1120</textwidth>
-					<font>Font33</font>
-					<label>31070</label>
-					<onclick>Skin.ToggleSetting(enableHubs)</onclick>
-					<selected>Skin.HasSetting(enableHubs)</selected>
-					<visible>ControlGroup(9).HasFocus(10)</visible>
-					<visible>!String.IsEqual(Skin.String(menuStyle),lumos)</visible>
 				</control>
 
 

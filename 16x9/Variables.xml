@@ -577,11 +577,6 @@
 		<value>Icon</value>
 	</variable>
 
-	<variable name="skinshortcuts-submenubutton">
-		<value condition="[Skin.HasSetting(enableHubs) | String.IsEqual(Skin.String(menuStyle),lumos)]">$LOCALIZE[31023]</value>
-		<value>$LOCALIZE[31071]</value>
-	</variable>
-
 	<!-- Keyboard autocompletion" -->
 	<variable name="keyboard-autocompletion">
 		<value condition="!System.HasAddon(plugin.program.autocompletion) | System.HasHiddenInput">-</value>
