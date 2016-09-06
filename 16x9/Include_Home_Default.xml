@@ -12,7 +12,7 @@
 			<onright>9002</onright>
 			<orientation>vertical</orientation>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
-			<visible allowhiddenfocus="true">!Control.HasFocus(9001)</visible>
+			<visible allowhiddenfocus="true">!ControlGroup(9010).HasFocus</visible>
 			<animation type="Hidden" reversible="true">
 				<effect type="fade" start="100" end="0" time="150" tween="sine" easing="in" />
 				<effect type="slide" start="0,0" end="600,0" time="160" tween="sine" easing="in" />
@@ -66,52 +66,70 @@
 		</control>
 
 		<!-- Sub menu -->
-		<control type="fixedlist" id="9001">
-			<left>120</left>
+		<control type="group" id="9010">
+			<animation effect="slide" end="440,0" time="320" tween="sine" easing="in" condition="ControlGroup(9010).HasFocus">Conditional</animation>
+			<left>-470</left>
 			<top>643</top>
-			<width>460</width>
+			<width>540</width>
 			<height>360</height>
-			<onup>9001</onup>
-			<ondown>9001</ondown>
-			<onleft>noop</onleft>
-			<onright>9000</onright>
-			<focusposition>2</focusposition>
-			<orientation>vertical</orientation>
-			<defaultcontrol always="true">1</defaultcontrol>
-			<scrolltime tween="sine" easing="out">240</scrolltime>
-			<visible allowhiddenfocus="true">Control.HasFocus(9001)</visible>
-			<animation type="Visible" reversible="false">
-				<effect type="fade" start="0" end="100" time="320" tween="sine" easing="in" />
-			</animation>
 
-			<itemlayout width="400" height="72">
-				<control type="label">
-					<top>0</top>
-					<width>400</width>
-					<height>72</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Font30</font>
-					<textcolor>$VAR[TextColor2]</textcolor>
-				</control>
-			</itemlayout>
+			<control type="button">
+				<left>0</left>
+				<top>0</top>
+				<width>540</width>
+				<height>360</height>
+				<onclick>noop</onclick>
+				<visible>Integer.IsGreater(Container(9001).NumItems,0)</visible>
+			</control>
 
-			<focusedlayout width="460" height="72">
-				<control type="label">
-					<top>0</top>
-					<width>460</width>
-					<height>72</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Font42</font>
-					<textcolor>TextColor1</textcolor>
-					<shadowcolor>ShadowColor</shadowcolor>
-					<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus(9001)">Conditional</animation>
-				</control>
-			</focusedlayout>
 
-			<content>
-				<include>skinshortcuts-submenu</include>
-			</content>
+			<control type="fixedlist" id="9001">
+				<left>120</left>
+				<top>0</top>
+				<width>460</width>
+				<height>360</height>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<onleft>noop</onleft>
+				<onright>9000</onright>
+				<focusposition>2</focusposition>
+				<orientation>vertical</orientation>
+				<defaultcontrol always="true">1</defaultcontrol>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+				<visible allowhiddenfocus="true">ControlGroup(9010).HasFocus</visible>
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="320" tween="sine" easing="in" />
+				</animation>
 
+				<itemlayout width="400" height="72">
+					<control type="label">
+						<top>0</top>
+						<width>400</width>
+						<height>72</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font30</font>
+						<textcolor>$VAR[TextColor2]</textcolor>
+					</control>
+				</itemlayout>
+
+				<focusedlayout width="460" height="72">
+					<control type="label">
+						<top>0</top>
+						<width>460</width>
+						<height>72</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font42</font>
+						<textcolor>TextColor1</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus(9001)">Conditional</animation>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<include>skinshortcuts-submenu</include>
+				</content>
+
+			</control>
 		</control>
 
 		<!-- Widgets -->
