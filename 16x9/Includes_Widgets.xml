@@ -139,13 +139,15 @@
 
 	<include name="widget-image">
 		<param name="aligny">bottom</param>
+		<param name="colordiffuse">FFFFFFFF</param>
 		<definition>
 			<control type="image">
 				<left>13</left>
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$PARAM[colordiffuse]" background="true" fallback="$PARAM[fallback]">$PARAM[art]</texture>
+				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+				<texture background="true" fallback="$PARAM[fallback]">$PARAM[art]</texture>
 				<aspectratio align="center" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<bordertexture border="1,1,1,36">$PARAM[shadow]</bordertexture>
 				<bordersize>0,0,0,33</bordersize>
@@ -156,13 +158,15 @@
 
 	<include name="widget-fakelandscape">
 		<param name="aligny">bottom</param>
+		<param name="colordiffuse">FFFFFFFF</param>
 		<definition>
 			<control type="image">
 				<left>13</left>
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$PARAM[colordiffuse]" background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(fanart)]</texture>
+				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+				<texture background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(fanart)]</texture>
 				<aspectratio align="center" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<bordertexture border="1,1,1,36">$PARAM[shadow]</bordertexture>
 				<bordersize>0,0,0,33</bordersize>
@@ -173,7 +177,8 @@
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$PARAM[colordiffuse]" background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(clearlogo)]</texture>
+				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+				<texture background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(clearlogo)]</texture>
 				<aspectratio align="center" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<bordertexture border="1,1,1,36">noop</bordertexture>
 				<bordersize>0,0,0,33</bordersize>
@@ -198,13 +203,15 @@
 
 	<include name="widget-faketvlandscape">
 		<param name="aligny">bottom</param>
+		<param name="colordiffuse">FFFFFFFF</param>
 		<definition>
 			<control type="image">
 				<left>13</left>
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$PARAM[colordiffuse]" background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(fanart)]</texture>
+				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+				<texture background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(fanart)]</texture>
 				<aspectratio align="center" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<bordertexture border="1,1,1,36">$PARAM[shadow]</bordertexture>
 				<bordersize>0,0,0,33</bordersize>
@@ -215,7 +222,8 @@
 				<top>0</top>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$PARAM[colordiffuse]" background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+				<colordiffuse>$PARAM[colordiffuse]</colordiffuse>
+				<texture background="true" fallback="$PARAM[fallback]">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
 				<aspectratio align="center" aligny="$PARAM[aligny]">$PARAM[aspectratio]</aspectratio>
 				<bordertexture border="1,1,1,36">noop</bordertexture>
 				<bordersize>0,0,0,33</bordersize>

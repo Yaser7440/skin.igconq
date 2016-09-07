@@ -312,7 +312,6 @@
 								<description>Primary art</description>
 								<param name="width">$SKINSHORTCUTS[imageWidth]</param>
 								<param name="height">$SKINSHORTCUTS[imageHeight]</param>
-								<param name="colordiffuse"></param>
 								<param name="fallback"></param>
 								<param name="art">$INFO[ListItem.$SKINSHORTCUTS[art]]</param>
 								<param name="aspectratio">keep</param>
@@ -323,7 +322,6 @@
 								<description>Fallback art</description>
 								<param name="width">$SKINSHORTCUTS[imageWidth]</param>
 								<param name="height">$SKINSHORTCUTS[imageHeight]</param>
-								<param name="colordiffuse"></param>
 								<param name="fallback"></param>
 								<param name="art">$INFO[ListItem.$SKINSHORTCUTS[art2]]</param>
 								<param name="aspectratio">keep</param>
@@ -334,7 +332,6 @@
 								<description>Catch-all art</description>
 								<param name="width">$SKINSHORTCUTS[imageWidth]</param>
 								<param name="height">$SKINSHORTCUTS[imageHeight]</param>
-								<param name="colordiffuse"></param>
 								<param name="fallback">DefaultShortcut.png</param>
 								<param name="art">$INFO[ListItem.Icon]</param>
 								<param name="aspectratio">keep</param>
