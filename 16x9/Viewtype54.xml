@@ -48,7 +48,7 @@
 					<width>450</width>
 					<height>45</height>
 					<font>Font33</font>
-					<textcolor>$VAR[TextColor2]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$INFO[ListItem.Artist]</label>
 				</control>
 			</control>

@@ -107,7 +107,7 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]$VAR[Label3,[CR],]</label>
-					<textcolor>$VAR[TextColor2]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 				</control>
 
