@@ -38,10 +38,18 @@
 		<include>skinshortcuts-template-weatherBackground</include>
 
 		<!-- Time -->
-		<control type="group">
-			<include content="Time">
-				<param name="heading"></param>
-			</include>
+		<include content="Time">
+			<param name="heading"></param>
+		</include>
+
+		<!-- Logo -->
+		<control type="image">
+			<left>120</left>
+			<top>110</top>
+			<width>247</width>
+			<height>44</height>
+			<texture>logo.png</texture>
+			<include>WindowFadeAnimation</include>
 		</control>
 		
 		<!-- Home layout -->
