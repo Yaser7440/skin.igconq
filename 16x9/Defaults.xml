@@ -5,7 +5,7 @@
 		<height>36</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textcolor>$VAR[DialogColor1]</textcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
 		<selectedcolor>$VAR[SelectedColor]</selectedcolor>
@@ -16,7 +16,7 @@
 		<height>36</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textcolor>$VAR[DialogColor1]</textcolor>
 		<scrollout>false</scrollout>
 		<scrollspeed>40</scrollspeed>
@@ -28,7 +28,7 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font36</font>
+		<font>Font33</font>
 		<label>-</label>
 		<textoffsetx>0</textoffsetx>
 		<textcolor>$VAR[DialogColor2]</textcolor>
@@ -47,7 +47,7 @@
 		<aligny>center</aligny>
 		<label>-</label>
 		<textoffsetx>0</textoffsetx>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textcolor>$VAR[DialogColor2]</textcolor>
 		<focusedcolor>$VAR[DialogColor1]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
@@ -63,11 +63,11 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font36</font>
+		<font>Font33</font>
 		<label>-</label>
-		<textcolor>$VAR[DialogColor2]</textcolor>
-		<focusedcolor>$VAR[DialogColor1]</focusedcolor>
-		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
+		<textcolor>$VAR[TextColor2]</textcolor>
+		<focusedcolor>$VAR[TextColor1]</focusedcolor>
+		<disabledcolor>$VAR[TextColor4]</disabledcolor>
 		<radiowidth>16</radiowidth>
 		<radioheight>16</radioheight>
 		<texturenofocus>-</texturenofocus>
@@ -86,7 +86,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<label>-</label>
-		<font>Font36</font>
+		<font>Font33</font>
 		<spinwidth>35</spinwidth>
 		<spinheight>66</spinheight>
 		<texturenofocus>-</texturenofocus>
@@ -114,7 +114,7 @@
 		<texturedown colordiffuse="$VAR[DialogColor1]">common/ArrowDownNF.png</texturedown>
 		<textureupfocus colordiffuse="$VAR[DialogColor1]">common/ArrowUpFO.png</textureupfocus>
 		<texturedownfocus colordiffuse="$VAR[DialogColor1]">common/ArrowDownFO.png</texturedownfocus>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textcolor>$VAR[DialogColor2]</textcolor>
 		<focusedcolor>$VAR[DialogColor1]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
@@ -132,7 +132,7 @@
 		<texturefocus>-</texturefocus>
 		<sliderwidth>230</sliderwidth>
 		<sliderheight>23</sliderheight>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textcolor>$VAR[DialogColor2]</textcolor>
 		<focusedcolor>$VAR[DialogColor1]</focusedcolor>
 		<disabledcolor>$VAR[DisabledColor]</disabledcolor>
@@ -167,7 +167,7 @@
 		<height>66</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font36</font>
+		<font>Font33</font>
 		<textoffsetx>0</textoffsetx>
 		<textcolor>$VAR[DialogColor2]</textcolor>
 		<focusedcolor>$VAR[DialogColor1]</focusedcolor>

@@ -55,7 +55,7 @@
 	</variable>
 
 	<variable name="HeadingLabel">
-		<value>$VAR[HeadingLabelPrimary]$VAR[HeadingLabelSecondary]</value>
+		<value>$VAR[HeadingLabelPrimary]$VAR[HeadingLabelSecondary,: ,]</value>
 	</variable>
 
 	<variable name="HeadingLabelPrimary">
@@ -99,7 +99,7 @@
 	</variable>
 
 	<variable name="HeadingLabelSecondary">
-		<value condition="Container.HasParent + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName,: ,]</value>
+		<value condition="Container.HasParent + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[31074]</value>
 		<value condition="Window.IsActive(PlayerSettings)">$LOCALIZE[16003]</value>
 		<value condition="Window.IsActive(MediaSettings)">$LOCALIZE[14211]</value>
@@ -297,38 +297,32 @@
 	</variable>
 
 	<variable name="SkinSettingButton10">
-		<value condition="ControlGroup(9).HasFocus(10)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(10)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 
 	<variable name="SkinSettingButton11">
-		<value condition="ControlGroup(9).HasFocus(11)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(11)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 
 	<variable name="SkinSettingButton12">
-		<value condition="ControlGroup(9).HasFocus(12)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(12)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 
 	<variable name="SkinSettingButton13">
-		<value condition="ControlGroup(9).HasFocus(13)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(13)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 
 	<variable name="SkinSettingButton14">
-		<value condition="ControlGroup(9).HasFocus(14)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(14)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 
 	<variable name="SkinSettingButton15">
-		<value condition="ControlGroup(9).HasFocus(15)">$VAR[DialogColor1]</value>
-		<value condition="!ControlGroup(9).HasFocus">$VAR[TextColor3]</value>
+		<value condition="ControlGroup(9).HasFocus(15)">$VAR[TextColor1]</value>
 		<value>$VAR[TextColor2]</value>
 	</variable>
 

@@ -43,6 +43,7 @@
 			<width>300</width>
 			<height>660</height>
 			<itemgap>0</itemgap>
+			<onleft>3001</onleft>
 			<onright>5</onright>
 			<onup>noop</onup>
 			<ondown>noop</ondown>
@@ -70,7 +71,7 @@
 			<top>900</top>
 			<width>1220</width>
 			<height>118</height>
-			<textcolor>$VAR[TextColor1]</textcolor>
+			<textcolor>$VAR[TextColor2]</textcolor>
 			<shadowcolor>TextColor4</shadowcolor>
 			<visible>ControlGroup(5).HasFocus</visible>
 		</control>
@@ -113,8 +114,8 @@
 					<height>1040</height>
 					<onup>noop</onup>
 					<ondown>noop</ondown>
-					<onleft>50</onleft>
-					<onright>50</onright>
+					<onleft>3</onleft>
+					<onright>3</onright>
 					<scrolltime>200</scrolltime>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
@@ -177,7 +178,7 @@
 
 
 					<!-- Change settings level -->
-					<control type="label">
+					<control type="label" id="81">
 						<label>Settings level:</label>
 						<textcolor>$VAR[TextColor2]</textcolor>
 						<height>40</height>
@@ -197,7 +198,7 @@
 			<font>Font33</font>
 			<align>center</align>
 			<label>-</label>
-			<textcolor>$VAR[TextColor1]</textcolor>
+			<textcolor>$VAR[TextColor2]</textcolor>
 		</control>
 
 		<!-- Default group button -->
@@ -206,10 +207,11 @@
 			<height>66</height>
 			<font>Font33</font>
 			<onclick>SetFocus(5)</onclick>
-			<textcolor>$VAR[SettingButtonFade]</textcolor>
+			<textcolor>$VAR[TextColor2]</textcolor>
 			<focusedcolor>$VAR[TextColor1]</focusedcolor>
 			<invalidcolor>TextColor4</invalidcolor>
 			<disabledcolor>TextColor4</disabledcolor>
+			<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(5).HasFocus">Conditional</animation>
 		</control>
 
 		<!-- Default button -->

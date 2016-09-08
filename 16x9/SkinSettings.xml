@@ -46,6 +46,7 @@
 					<label>31021</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton10]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- Background -->
@@ -55,6 +56,7 @@
 					<label>31020</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton11]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- Weather -->
@@ -64,6 +66,7 @@
 					<label>$LOCALIZE[8]</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton13]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- General -->
@@ -73,6 +76,7 @@
 					<label>128</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton12]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- Addons -->
@@ -82,6 +86,7 @@
 					<label>$LOCALIZE[31063]</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton14]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- Backup/Reset -->
@@ -91,6 +96,7 @@
 					<label>$LOCALIZE[31075]</label>
 					<font>Font33</font>
 					<textcolor>$VAR[SkinSettingButton15]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 			</control>
@@ -120,6 +126,8 @@
 					<font>Font33</font>
 					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
 					<visible>ControlGroup(9).HasFocus(10)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 				<!-- Small main menu -->
 				<control type="radiobutton" id="1003">
@@ -203,6 +211,8 @@
 					<label2>$VAR[OverlayColor]</label2>
 					<onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=color.overlay)</onclick>
 					<visible>ControlGroup(9).HasFocus(11)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 
 
@@ -217,6 +227,8 @@
 					<label2>$INFO[Skin.String(weatherIcons.name)]</label2>
 					<onclick>RunScript(script.image.resource.select,property=weatherIcons&amp;type=resource.images.weathericons)</onclick>
 					<visible>ControlGroup(9).HasFocus(13)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 				<!-- Weather fanart -->
 				<control type="button" id="1202">
@@ -228,6 +240,8 @@
 					<label>$LOCALIZE[31068]</label>
 					<label2>$INFO[Skin.String(weatherFanart.name)]</label2>
 					<visible>ControlGroup(9).HasFocus(13)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 
 
@@ -404,6 +418,8 @@
 					<onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
 					<label>$ADDON[script.skin.helper.service 32028]</label>
 					<visible>ControlGroup(9).HasFocus(15)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 				<control type="button" id="1502">
 					<width>1220</width>
@@ -412,6 +428,8 @@
 					<onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
 					<label>$ADDON[script.skin.helper.service 32032]</label>
 					<visible>ControlGroup(9).HasFocus(15)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 				<!-- Reset all -->
 				<control type="button" id="1503">
@@ -421,6 +439,8 @@
 					<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					<label>$ADDON[script.skinshortcuts 32037]</label>
 					<visible>ControlGroup(9).HasFocus(15)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 				<!-- Reset skin's setting -->
 				<control type="button" id="1504">
@@ -430,6 +450,8 @@
 					<label>31058</label>
 					<onclick>Skin.ResetSettings</onclick>
 					<visible>ControlGroup(9).HasFocus(15)</visible>
+					<focusedcolor>TextColor1</focusedcolor>
+					<textcolor>TextColor2</textcolor>
 				</control>
 			</control>
 
