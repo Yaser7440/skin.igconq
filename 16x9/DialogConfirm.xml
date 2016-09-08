@@ -53,7 +53,7 @@
 			<width>760</width>
 			<height>20</height>
 			<texturebg>common/ScrollBackgroundHorizontal.png</texturebg>
-			<midtexture colordiffuse="$VAR[TextColor1]">common/ScrollbarGripHorizontalFO.png</midtexture>
+			<midtexture colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripHorizontalFO.png</midtexture>
 			<info>System.Progressbar</info>
 		</control>
 

@@ -398,7 +398,7 @@
 	</variable>
 
 	<variable name="Label3">
-		<value>$INFO[ListItem.VideoCodec,[LIGHT]Video[/LIGHT] ,]$INFO[ListItem.VideoResolution, ,p]$INFO[ListItem.AudioCodec,   [LIGHT]Audio[/LIGHT] ,]$VAR[AudioChannels, ,]</value>
+		<value>$INFO[ListItem.VideoCodec,,]$INFO[ListItem.VideoResolution, ,p]$INFO[ListItem.AudioCodec,   ,]$VAR[AudioChannels, ,]</value>
 	</variable>
 
 	<variable name="AudioChannels">

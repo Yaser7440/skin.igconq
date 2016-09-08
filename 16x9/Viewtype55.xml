@@ -94,6 +94,7 @@
 					<textcolor>$VAR[TextColor1]</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus(55)">Conditional</animation>
 				</control>
 
 				<!-- Details -->
@@ -105,8 +106,9 @@
 					<font>Font27</font>
 					<align>center</align>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColor1]</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
+					<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus(55)">Conditional</animation>
 				</control>
 
 			</control>

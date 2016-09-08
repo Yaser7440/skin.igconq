@@ -471,9 +471,6 @@
 		<property name="art">Icon</property>
 		<property name="art2">Icon</property>
 
-		<!-- Shadow value is inverted, so it is enabled by default -->
-		<property name="shadow" tag="property" attribute="name|shadow" value="True">noop</property>
-		<property name="shadow" tag="property" attribute="name|widgetPath">views/DropShadowSmall.png</property>
 		<property name="shadow">noop</property>
 
 		<property name="itemLabel" tag="label" />

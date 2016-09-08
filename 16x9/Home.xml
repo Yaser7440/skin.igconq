@@ -31,7 +31,7 @@
 			<include>VisibleFadeAnimation</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>FanartDiffuse</colordiffuse>
-			<texture>$VAR[widgetBackground]</texture>
+			<texture fallback="special://skin/extras/backgrounds/ocean.jpg">$VAR[widgetBackground]</texture>
 			<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 			<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 		</control>

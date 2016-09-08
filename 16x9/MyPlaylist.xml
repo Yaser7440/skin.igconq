@@ -33,7 +33,7 @@
 				<colordiffuse>OverlayColorNF</colordiffuse>
 				<texturesliderbackground border="9,1,6,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[TextColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(50)</visible>
@@ -73,7 +73,7 @@
 					<top>0</top>
 					<width>24</width>
 					<height>20</height>
-					<texture border="1,12,1,1" colordiffuse="$VAR[TextColor1]">common/ScrollbarGripHorizontalFO.png</texture>
+					<texture border="1,12,1,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripHorizontalFO.png</texture>
 					<animation effect="slide" start="0" end="24" time="200" condition="ControlGroup(4000).HasFocus()">Conditional</animation>
 					<animation effect="slide" start="0" end="48" time="200" condition="ControlGroup(5000).HasFocus()">Conditional</animation>
 				</control>
