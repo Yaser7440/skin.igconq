@@ -26,12 +26,12 @@
 
 		<include>WindowBackgroundImage</include>
 
-		<control type="image">
+		<control type="image" id="120001">
 			<include>FullscreenDimensions</include>
 			<include>VisibleFadeAnimation</include>
 			<fadetime>400</fadetime>
 			<colordiffuse>FanartDiffuse</colordiffuse>
-			<texture fallback="special://skin/extras/backgrounds/ocean.jpg">$VAR[widgetBackground]</texture>
+			<texture fallback="Transparent.png">$VAR[widgetBackground]</texture>
 			<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 			<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
 		</control>

@@ -89,6 +89,24 @@
 			<timeperimage>10000</timeperimage>
 			<!--fadetime>200</fadetime-->
 		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>VisibleFadeAnimation</include>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture>special://skin/extras/backgrounds/ocean.jpg</texture>
+			<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+			<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+			<visible>[!Window.IsActive(Home) + [String.IsEqual(Control.GetLabel(120000),Transparent.png) | String.IsEmpty(Control.GetLabel(120000))]] | [Window.IsActive(Home) + [String.IsEqual(Control.GetLabel(120001),Transparent.png) | String.IsEmpty(Control.GetLabel(120001))]]</visible>
+		</control>
+		<control type="image" id="120000">
+			<include>FullscreenDimensions</include>
+			<include>VisibleFadeAnimation</include>
+			<fadetime>400</fadetime>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			<texture background="true" fallback="Transparent.png">$INFO[ListItem.Art(fanart)]</texture>
+			<animation effect="fade" start="100" end="0" condition="[Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+			<animation effect="fade" start="70" end="70" condition="![Player.HasVideo + Skin.HasSetting(BackgroundVideo)] | [Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)]">Conditional</animation>
+		</control>
 	</include>
 
 	<!-- Window background image with fade animation -->
@@ -129,6 +147,7 @@
 	<!-- Fanart -->
 	<include name="Fanart">
 		<control type="group">
+			<visible>False</visible>
 			<control type="image">
 				<include>FullscreenDimensions</include>
 				<include>VisibleFadeAnimation</include>
@@ -283,7 +302,7 @@
 				<width>auto</width>
 				<height>44</height>
 				<align>right</align>
-				<label>$INFO[Container.NumItems]</label>
+				<label>$INFO[Control.GetLabel(120000)] $INFO[Container.NumItems]</label>
 				<font>Font25</font>
 				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>

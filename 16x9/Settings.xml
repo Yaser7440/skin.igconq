@@ -151,73 +151,32 @@
 				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
 			</control>
 
-			<!-- More -->
+			<!-- Add-on browser -->
+			<control type="button" id="9">
+				<width>300</width>
+				<height>42</height>
+				<label>$LOCALIZE[10040]</label>
+				<font>Font42</font>
+				<textcolor>$VAR[TextColor2]</textcolor>
+				<focusedcolor>$VAR[TextColor1]</focusedcolor>
+				<onclick>ActivateWindow(addonbrowser)</onclick>
+				<onright>ActivateWindow(addonbrowser)</onright>
+				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+			</control>
+
+			<!-- File manager -->
 			<control type="button" id="10">
 				<width>300</width>
 				<height>42</height>
-				<label>22082</label>
-				<font>Font42</font>
-				<textcolor>$VAR[MoreButtonFade]</textcolor>
-				<focusedcolor>$VAR[TextColor1]</focusedcolor>
-				<onclick>SetFocus(8000)</onclick>
-				<onright>SetFocus(8000)</onright>
-			</control>
-
-		</control>
-
-		<!-- More list -->
-		<control type="grouplist" id="8000">
-			<left>480</left>
-			<top>244</top>
-			<width>1680</width>
-			<height>726</height>
-			<itemgap>34</itemgap>
-			<onleft>9000</onleft>
-			<onright>noop</onright>
-			<onup>noop</onup>
-			<ondown>noop</ondown>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(8000).HasFocus + !Control.HasFocus(20)">Conditional</animation>
-
-			<!-- Addons -->
-			<control type="button" id="8001">
-				<width>970</width>
-				<height>42</height>
-				<font>Font33</font>
-				<label>24001</label>
-				<textcolor>$VAR[TextColor2]</textcolor>
-				<focusedcolor>$VAR[TextColor1]</focusedcolor>
-				<invalidcolor>TextColor4</invalidcolor>
-				<disabledcolor>TextColor4</disabledcolor>
-				<onright>ActivateWindow(addonbrowser)</onright>
-				<onclick>ActivateWindow(addonbrowser)</onclick>
-			</control>
-			<!-- File manager -->
-			<control type="button" id="8003">
-				<width>970</width>
-				<height>42</height>
-				<font>Font33</font>
 				<label>7</label>
+				<font>Font42</font>
 				<textcolor>$VAR[TextColor2]</textcolor>
 				<focusedcolor>$VAR[TextColor1]</focusedcolor>
-				<invalidcolor>TextColor4</invalidcolor>
-				<disabledcolor>TextColor4</disabledcolor>
-				<onright>ActivateWindow(filemanager)</onright>
 				<onclick>ActivateWindow(filemanager)</onclick>
+				<onright>ActivateWindow(filemanager)</onright>
+				<animation effect="fade" start="100" end="70" time="0" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
 			</control>
 
-		</control>
-
-		<!-- More list indicator -->
-		<control type="image">
-			<left>442</left>
-			<top>248</top>
-			<width>20</width>
-			<height>60</height>
-			<colordiffuse>OverlayColorFO</colordiffuse>
-			<texture border="6,1,8,1">common/ScrollBackground.png</texture>
-			<animation effect="fade" start="100" end="0" time="0" condition="!ControlGroup(8000).HasFocus + !Control.HasFocus(20)">Conditional</animation>
-			<animation effect="fade" start="100" end="50" time="0" condition="Control.HasFocus(20)">Conditional</animation>
 		</control>
 
 	</controls>

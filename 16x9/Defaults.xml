@@ -65,9 +65,9 @@
 		<aligny>center</aligny>
 		<font>Font33</font>
 		<label>-</label>
-		<textcolor>$VAR[TextColor2]</textcolor>
-		<focusedcolor>$VAR[TextColor1]</focusedcolor>
-		<disabledcolor>$VAR[TextColor4]</disabledcolor>
+		<textcolor>$VAR[DialogColor2]</textcolor>
+		<focusedcolor>$VAR[DialogColor1]</focusedcolor>
+		<disabledcolor>DisabledColor</disabledcolor>
 		<radiowidth>16</radiowidth>
 		<radioheight>16</radioheight>
 		<texturenofocus>-</texturenofocus>
