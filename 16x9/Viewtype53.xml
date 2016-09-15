@@ -6,16 +6,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(53)</visible>
 
-			<!-- Curve -->
-			<control type="image">
-				<left>20</left>
-				<top>20</top>
-				<width>1880</width>
-				<height>844</height>
-				<texture border="0,0,0,40">common/CurveHorz.png</texture>
-				<visible>Skin.HasSetting(ShowCurve)</visible>
-			</control>
-
 			<!-- Thumbs -->
 			<control type="panel" id="53">
 				<left>150</left>

@@ -11,15 +11,6 @@
 			<!-- Background -->
 			<include>WindowBackgroundImage</include>
 			
-			<!-- Curve -->
-			<control type="image">
-				<right>20</right>
-				<top>20</top>
-				<width>1280</width>
-				<height>1040</height>
-				<texture border="40,0,0,0">common/Curve.png</texture>
-				<visible>Skin.HasSetting(ShowCurve)</visible>
-			</control>
 
 			<include content="Time">
 				<param name="heading">$LOCALIZE[20077]</param>
@@ -255,17 +246,6 @@
 					<font>Font33</font>
 					<onclick>Skin.ToggleSetting(Headings)</onclick>
 					<selected>!Skin.HasSetting(Headings)</selected>
-					<visible>ControlGroup(9).HasFocus(12)</visible>
-				</control>
-				<!-- Show curved segments -->
-				<control type="radiobutton" id="1302">
-					<width>1220</width>
-					<height>66</height>
-					<textwidth>1120</textwidth>
-					<font>Font33</font>
-					<label>31030</label>
-					<onclick>Skin.ToggleSetting(ShowCurve)</onclick>
-					<selected>Skin.HasSetting(ShowCurve)</selected>
 					<visible>ControlGroup(9).HasFocus(12)</visible>
 				</control>
 				<!-- Hide 'Mouse' warning -->

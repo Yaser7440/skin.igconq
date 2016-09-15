@@ -11,16 +11,6 @@
 		<!-- Background -->
 		<include>WindowBackgroundImage</include>
 
-		<!-- Curve -->
-		<control type="image">
-			<right>20</right>
-			<top>20</top>
-			<width>1280</width>
-			<height>1040</height>
-			<texture border="40,0,0,0">common/Curve.png</texture>
-			<visible>Skin.HasSetting(ShowCurve)</visible>
-		</control>
-
 		<!-- Time -->
 		<include>Time</include>
 

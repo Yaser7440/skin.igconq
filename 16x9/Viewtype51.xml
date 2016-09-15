@@ -6,16 +6,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>
 
-			<!-- Curve -->
-			<control type="image">
-				<right>20</right>
-				<top>20</top>
-				<width>1280</width>
-				<height>1040</height>
-				<texture border="40,0,0,0">common/Curve.png</texture>
-				<visible>Skin.HasSetting(ShowCurve)</visible>
-			</control>
-
 			<!-- Poster image -->
 			<control type="group">
 				<visible>!String.Contains(ListItem.Icon,Default) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>

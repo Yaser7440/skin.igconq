@@ -60,7 +60,6 @@
 				<textureslidernib>-</textureslidernib>
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(52)</visible>
-				<animation effect="slide" end="0,-22" condition="Skin.HasSetting(ShowCurve)">Conditional</animation>
 			</control>
 
 			<!-- Scrollbar (wall) -->
