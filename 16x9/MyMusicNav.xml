@@ -70,6 +70,9 @@
 				<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(55)</visible>
 			</control>
 
+			<!-- Media flags -->
+			<include>MediaFlags</include>
+
 			<!-- Item count -->
 			<include>ItemCount</include>
 

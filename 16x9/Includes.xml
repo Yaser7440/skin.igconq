@@ -302,7 +302,7 @@
 				<width>auto</width>
 				<height>44</height>
 				<align>right</align>
-				<label>$INFO[Control.GetLabel(120000)] $INFO[Container.NumItems]</label>
+				<label>$INFO[Container.NumItems]</label>
 				<font>Font25</font>
 				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
@@ -313,6 +313,51 @@
 				<label>$VAR[ContentType]</label>
 				<font>Font33</font>
 				<textcolor>$VAR[TextColor2]</textcolor>
+			</control>
+		</control>
+	</include>
+
+	<!-- Media Flags -->
+	<include name="MediaFlags">
+		<control type="grouplist">
+			<left>120</left>
+			<bottom>110</bottom>
+			<width>800</width>
+			<height>44</height>
+			<itemgap>0</itemgap>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<visible>Integer.IsGreater(Container.NumItems,0)</visible>
+			<control type="image">
+				<width>44</width>
+				<height>44</height>
+				<texture>DefaultMovies.png</texture>
+				<visible>!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>44</height>
+				<align>right</align>
+				<label>$INFO[ListItem.VideoCodec,,]$INFO[ListItem.VideoResolution, ,p]</label>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColor2]</textcolor>
+				<visible>!String.IsEmpty(ListItem.VideoCodec) + !String.IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+			<control type="image">
+				<width>44</width>
+				<height>44</height>
+				<texture>DefaultAudio.png</texture>
+				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>44</height>
+				<align>right</align>
+				<label>$INFO[ListItem.AudioCodec,,]$VAR[AudioChannels, ,]</label>
+				<font>Font33</font>
+				<textcolor>$VAR[TextColor2]</textcolor>
+				<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 			</control>
 		</control>
 	</include>

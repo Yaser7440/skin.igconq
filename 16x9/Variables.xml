@@ -391,10 +391,6 @@
 		<value condition="Container.Content(songs) + String.IsEmpty(ListItem.Album) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 	</variable>
 
-	<variable name="Label3">
-		<value>$INFO[ListItem.VideoCodec,,]$INFO[ListItem.VideoResolution, ,p]$INFO[ListItem.AudioCodec,   ,]$VAR[AudioChannels, ,]</value>
-	</variable>
-
 	<variable name="AudioChannels">
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,1)">Mono</value>
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">Stereo</value>

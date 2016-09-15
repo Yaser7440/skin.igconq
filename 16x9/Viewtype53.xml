@@ -99,7 +99,7 @@
 					<font>Font27</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<label>$VAR[Label2][CR]$VAR[Label3]</label>
+					<label>$VAR[Label2]</label>
 					<textcolor>$VAR[TextColor2]</textcolor>
 					<shadowcolor>ShadowColor</shadowcolor>
 					<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="!Control.HasFocus(53)">Conditional</animation>

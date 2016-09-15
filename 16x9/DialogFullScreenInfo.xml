@@ -54,9 +54,9 @@
 					<top>57</top>
 					<width>1280</width>
 					<height>165</height>
-					<label>$VAR[VideoPlayerPlot]</label>
-					<font>Font25</font>
-					<textcolor>$VAR[DialogColor2]</textcolor>
+					<label>[LIGHT]$VAR[VideoPlayerPlot][/LIGHT]</label>
+					<font>Font27</font>
+					<textcolor>$VAR[DialogColor1]</textcolor>
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
 				</control>
 
