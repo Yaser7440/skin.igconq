@@ -176,7 +176,6 @@
 				<animation type="WindowOpen" condition="Window.Previous(startup)">
 					<effect type="fade" start="50" end="100" time="200" tween="cubic" easing="out"/>
 				</animation>
-				<visible>!Skin.HasSetting(Headings)</visible>
 			</control>
 
 			<control type="label">
